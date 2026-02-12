@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acconecto - Smart Fitness Technology</title>
+    <meta name="description" content="Acconecto develops AI-powered fitness applications. FormLab uses real-time pose estimation to analyze your workout form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            background: #fafafa;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 250, 250, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: #6366f1; }
+
+        nav a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #1a1a2e; }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            background: linear-gradient(180deg, #fafafa 0%, #f0f0ff 100%);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #6366f1;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            max-width: 700px;
+        }
+
+        h1 .gradient {
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            color: #64748b;
+            max-width: 520px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2d2d4a;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a1a2e;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .btn svg { width: 18px; height: 18px; }
+
+        .features {
+            padding: 100px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .features .section-sub {
+            text-align: center;
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #f1f5f9;
+            transition: all 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: #e2e8f0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .icon-purple { background: rgba(99,102,241,0.1); }
+        .icon-pink { background: rgba(236,72,153,0.1); }
+        .icon-amber { background: rgba(245,158,11,0.1); }
+
+        .about {
+            padding: 100px 24px;
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .about-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: rgba(255,255,255,0.65);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about .company-info {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 32px;
+            text-align: center;
+        }
+
+        .info-item label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 6px;
+        }
+
+        .info-item span {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+        }
+
+        footer {
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        footer a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        footer a:hover { color: #1a1a2e; }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            nav { padding: 16px 20px; }
+            .features { padding: 60px 20px; }
+            .about { padding: 60px 20px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">acconecto<span>.</span></div>
+        <div style="display:flex;gap:24px;">
+            <a href="#features">Products</a>
+            <a href="#about">About</a>
+            <a href="mailto:acconecto@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="badge">Now on the App Store</div>
+        <h1>Train Smarter with <span class="gradient">AI Form Analysis</span></h1>
+        <p class="subtitle">Acconecto builds intelligent fitness tools that help you move better. Real-time pose estimation, instant feedback, zero guesswork.</p>
+        <div class="cta-group">
+            <a href="https://apps.apple.com/app/formlab/id6758761079" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Download FormLab
+            </a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>FormLab</h2>
+        <p class="section-sub">AI-powered squat form analyzer for iOS</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon icon-purple">&#x1F3AF;</div>
+                <h3>Real-Time Pose Detection</h3>
+                <p>Powered by Apple Vision framework. Detects body joints and analyzes your squat form instantly as you move, with no cloud processing required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-pink">&#x1F4CA;</div>
+                <h3>Detailed Form Feedback</h3>
+                <p>Get specific feedback on knee valgus, forward lean, heel raise, depth, and asymmetry. Each rep is scored and tracked over time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-amber">&#x1F3AC;</div>
+                <h3>Session Recording</h3>
+                <p>Record your workout sessions with form event markers. Review your videos with a timeline showing exactly where issues occurred.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-inner">
+            <h2>About Acconecto</h2>
+            <p>Acconecto is a software company focused on developing intelligent mobile applications that connect technology with everyday fitness. We leverage on-device machine learning and computer vision to create tools that help people train safer and more effectively.</p>
+            <p>Our first product, FormLab, uses real-time AI pose estimation to provide instant squat form analysis, helping users prevent injuries and improve their technique.</p>
+
+            <div class="company-info">
+                <div class="info-item">
+                    <label>Founded</label>
+                    <span>2025</span>
+                </div>
+                <div class="info-item">
+                    <label>Location</label>
+                    <span>Seoul, South Korea</span>
+                </div>
+                <div class="info-item">
+                    <label>Focus</label>
+                    <span>AI & Fitness Technology</span>
+                </div>
+                <div class="info-item">
+                    <label>Contact</label>
+                    <span>acconecto@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:acconecto@gmail.com">Contact</a>
+        </div>
+        <p>&copy; 2025 Acconecto. All rights reserved.</p>
+    </footer>
+</body>
+</html>
