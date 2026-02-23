@@ -1,60 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Acconecto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>FormLab - Privacy Policy</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, sans-serif; color: #1a1a2e; background: #fafafa; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 720px; margin: 0 auto; padding: 80px 24px; }
-        a.back { display: inline-block; margin-bottom: 32px; color: #6366f1; text-decoration: none; font-size: 14px; font-weight: 500; }
-        h1 { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; }
-        .updated { color: #94a3b8; font-size: 14px; margin-bottom: 48px; }
-        h2 { font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 12px; }
-        p, li { font-size: 15px; line-height: 1.8; color: #475569; margin-bottom: 12px; }
-        ul { padding-left: 20px; margin-bottom: 12px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; background: #fafafa; }
+        .container { background: #fff; padding: 32px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        h1 { color: #1a1a1a; margin-bottom: 4px; }
+        h2 { color: #444; margin-top: 28px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+        .date { color: #888; font-size: 14px; margin-bottom: 24px; }
+        .lang-switch { text-align: center; margin: 20px 0; }
+        .lang-switch button { padding: 8px 20px; margin: 0 6px; border: 1px solid #ddd; border-radius: 8px; background: #fff; cursor: pointer; font-size: 15px; }
+        .lang-switch button.active { background: #007AFF; color: #fff; border-color: #007AFF; }
+        .section { display: none; }
+        .section.active { display: block; }
+        a { color: #007AFF; }
+        a.back { display: inline-block; margin-bottom: 12px; text-decoration: none; font-size: 14px; font-weight: 500; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a class="back" href="/">&larr; Back to Home</a>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: February 12, 2025</p>
+    <a class="back" href="/">&larr; Back to Home</a>
 
-        <h2>Overview</h2>
-        <p>Acconecto ("we", "our", "us") operates the FormLab mobile application. This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our app.</p>
-
-        <h2>Information We Collect</h2>
-        <p>FormLab is designed with privacy in mind. All pose analysis is performed entirely on your device using Apple's Vision framework. We do not collect, transmit, or store any of the following:</p>
-        <ul>
-            <li>Camera footage or images</li>
-            <li>Body pose data or movement patterns</li>
-            <li>Workout session data</li>
-            <li>Personal health information</li>
-        </ul>
-
-        <h2>On-Device Processing</h2>
-        <p>All body pose estimation and form analysis happens locally on your iPhone. No video, image, or pose data ever leaves your device. Your workout history is stored locally using on-device storage and is never uploaded to any server.</p>
-
-        <h2>Camera Usage</h2>
-        <p>FormLab requires camera access to perform real-time pose estimation. Camera data is processed in real-time and is not recorded or stored unless you explicitly choose to record a session. Recorded videos are saved to your device's local storage and optionally to your photo library.</p>
-
-        <h2>Third-Party Services</h2>
-        <p>FormLab may include Google AdMob for displaying advertisements in the free version. AdMob may collect device identifiers and usage data according to Google's privacy policy. Pro users who remove ads are not subject to any ad-related data collection.</p>
-
-        <h2>Data Storage</h2>
-        <p>All workout data (session history, rep counts, form scores) is stored locally on your device using SQLite. This data is not synced, backed up to any cloud service, or accessible to us in any way.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>Our app does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:acconecto@gmail.com">acconecto@gmail.com</a>.</p>
+    <div class="lang-switch">
+        <button id="btn-ko" class="active" onclick="switchLang('ko')">한국어</button>
+        <button id="btn-en" onclick="switchLang('en')">English</button>
     </div>
+
+    <!-- 한국어 -->
+    <div id="ko" class="section active">
+        <div class="container">
+            <h1>FormLab 개인정보 처리방침</h1>
+            <p class="date">최종 수정일: 2026년 2월 5일</p>
+
+            <h2>1. 수집하는 정보</h2>
+            <p>FormLab은 카메라를 통해 실시간으로 운동 자세를 분석합니다. 카메라 영상은 기기 내에서만 처리되며, 외부 서버로 전송되지 않습니다. 운동 기록(횟수, 시간, 점수)은 기기 내 로컬 저장소에만 저장됩니다.</p>
+
+            <h2>2. 광고</h2>
+            <p>본 앱은 Google AdMob을 통해 광고를 표시합니다. AdMob은 광고 개인화를 위해 기기 식별자(IDFA)를 수집할 수 있습니다. 사용자는 앱 추적 투명성(ATT) 팝업을 통해 이를 허용 또는 거부할 수 있습니다.</p>
+            <p>Google의 개인정보 처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+            <h2>3. 인앱 구입</h2>
+            <p>Pro 버전 구매는 Apple의 App Store 결제 시스템을 통해 처리됩니다. 결제 정보는 Apple이 관리하며, 개발자는 접근할 수 없습니다.</p>
+
+            <h2>4. 데이터 저장</h2>
+            <p>모든 운동 데이터는 사용자 기기의 로컬 저장소(SQLite)에만 저장됩니다. 클라우드 동기화나 외부 서버 전송은 없습니다.</p>
+
+            <h2>5. 아동 개인정보</h2>
+            <p>본 앱은 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+            <h2>6. 문의</h2>
+            <p>개인정보 관련 문의: <a href="mailto:acconecto@gmail.com">acconecto@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="section">
+        <div class="container">
+            <h1>FormLab Privacy Policy</h1>
+            <p class="date">Last updated: February 5, 2026</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>FormLab analyzes your workout form in real time using the device camera. Camera footage is processed entirely on-device and is never transmitted to external servers. Workout records (reps, duration, scores) are stored only in local storage on your device.</p>
+
+            <h2>2. Advertising</h2>
+            <p>This app displays ads through Google AdMob. AdMob may collect device identifiers (IDFA) for ad personalization. You can allow or deny this through the App Tracking Transparency (ATT) prompt.</p>
+            <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+            <h2>3. In-App Purchases</h2>
+            <p>Pro version purchases are processed through Apple's App Store payment system. Payment information is managed by Apple, and the developer does not have access to it.</p>
+
+            <h2>4. Data Storage</h2>
+            <p>All workout data is stored exclusively in local storage (SQLite) on your device. There is no cloud synchronization or transmission to external servers.</p>
+
+            <h2>5. Children's Privacy</h2>
+            <p>This app does not intentionally collect personal information from children under 13 years of age.</p>
+
+            <h2>6. Contact</h2>
+            <p>For privacy-related inquiries: <a href="mailto:acconecto@gmail.com">acconecto@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
 </body>
 </html>
