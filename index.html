@@ -3,687 +3,815 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111312">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Acconecto가 만든 모바일 앱을 한 곳에서 만나보세요. FormLab과 하루결노트의 App Store, Google Play 링크를 제공합니다.">
-    <title>Acconecto Store</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+    <title>Acconecto — Apps</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg: #111312;
-            --panel: #f4efe5;
-            --ink: #141515;
-            --muted: #737066;
-            --line: rgba(20, 21, 21, 0.12);
-            --green: #6f8a6c;
-            --green-deep: #40523e;
-            --blue: #657f92;
-            --clay: #b86551;
-            --white: #fffaf0;
-            --shadow: 0 26px 70px rgba(0, 0, 0, 0.32);
+            --bg: #ffffff;
+            --surface: #fafafa;
+            --surface-2: #f4f4f5;
+            --ink: #0a0a0a;
+            --ink-2: #18181b;
+            --muted: #71717a;
+            --muted-2: #a1a1aa;
+            --line: #e4e4e7;
+            --line-2: #ededef;
+            --accent: #0a0a0a;
         }
 
         * { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
         body {
             margin: 0;
             min-width: 320px;
-            color: var(--white);
-            background:
-                linear-gradient(180deg, rgba(17, 19, 18, 0.86), #111312 68%),
-                repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 12px),
-                #111312;
-            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
+            font-feature-settings: "ss01", "ss02", "cv01", "cv02";
             -webkit-font-smoothing: antialiased;
-            letter-spacing: 0;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            line-height: 1.5;
         }
 
-        a { color: inherit; }
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3, p, ul { margin: 0; padding: 0; }
+        ul { list-style: none; }
 
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ---------- Header ---------- */
         .site-header {
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: saturate(180%) blur(16px);
+            -webkit-backdrop-filter: saturate(180%) blur(16px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+        .site-header.is-scrolled { border-bottom-color: var(--line); }
+
+        .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: min(1120px, calc(100vw - 32px));
-            height: 72px;
-            margin: 0 auto;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            height: 64px;
         }
 
         .brand {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
             font-size: 14px;
-            font-weight: 800;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--ink);
         }
 
         .brand-mark {
             display: grid;
-            width: 34px;
-            height: 34px;
             place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 8px;
-            background: #f4efe5;
-            color: #111312;
-            font-weight: 800;
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background: var(--ink);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .top-nav {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
         }
 
-        .top-nav a {
-            border: 1px solid rgba(255, 255, 255, 0.12);
+        .nav-link {
+            padding: 8px 12px;
             border-radius: 8px;
-            padding: 9px 12px;
-            color: rgba(255, 255, 255, 0.78);
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
+            color: var(--muted);
+            font-size: 13.5px;
+            font-weight: 500;
+            transition: color 0.15s ease, background 0.15s ease;
+            white-space: nowrap;
         }
+        .nav-link:hover { color: var(--ink); background: var(--surface-2); }
 
-        main {
-            width: min(1120px, calc(100vw - 32px));
-            margin: 0 auto;
+        .nav-cta {
+            margin-left: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: var(--ink);
+            color: #fff;
+            font-size: 13.5px;
+            font-weight: 600;
+            transition: background 0.15s ease, transform 0.15s ease;
+            white-space: nowrap;
         }
+        .nav-cta:hover { background: #27272a; }
 
+        /* ---------- Hero ---------- */
         .hero {
-            display: grid;
-            min-height: calc(100vh - 72px);
-            grid-template-columns: minmax(0, 0.96fr) minmax(360px, 1.04fr);
-            align-items: center;
-            gap: 42px;
-            padding: 48px 0 74px;
+            padding: 120px 0 96px;
+            border-bottom: 1px solid var(--line);
         }
 
         .eyebrow {
-            margin: 0 0 12px;
-            color: #cbbf9c;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 11px 5px 9px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: #fff;
+            color: var(--ink-2);
             font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: -0.005em;
+            white-space: nowrap;
+        }
+        .eyebrow .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
         }
 
-        h1, h2, h3, p { margin-top: 0; }
-        h1 {
-            margin-bottom: 22px;
-            font-family: "Noto Serif KR", Georgia, serif;
-            font-size: clamp(52px, 9vw, 112px);
-            line-height: 0.98;
-            letter-spacing: 0;
+        .hero h1 {
+            margin: 28px 0 24px;
+            font-size: clamp(44px, 7.2vw, 88px);
+            font-weight: 700;
+            line-height: 1.02;
+            letter-spacing: -0.045em;
+            color: var(--ink);
+            max-width: 900px;
+            text-wrap: balance;
         }
+        .hero h1 .quiet { color: var(--muted-2); }
 
-        .lead {
-            max-width: 560px;
-            color: rgba(255, 250, 240, 0.76);
+        .hero-lead {
+            max-width: 580px;
+            color: var(--muted);
             font-size: 18px;
-            line-height: 1.82;
+            line-height: 1.6;
+            font-weight: 400;
+            letter-spacing: -0.005em;
+            text-wrap: pretty;
         }
 
-        .hero-actions, .store-row, .policy-links {
+        .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 36px;
         }
 
-        .primary-link, .secondary-link, .store-button, .policy-links a {
+        .btn {
             display: inline-flex;
-            min-height: 44px;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            padding: 0 16px;
+            gap: 8px;
+            height: 42px;
+            padding: 0 18px;
+            border-radius: 9px;
             font-size: 14px;
-            font-weight: 800;
-            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+            white-space: nowrap;
         }
-
-        .primary-link { background: var(--white); color: #111312; }
-        .secondary-link {
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            color: rgba(255, 250, 240, 0.86);
+        .btn-primary {
+            background: var(--ink);
+            color: #fff;
         }
-
-        .hero-board {
-            position: relative;
-            min-height: 560px;
-        }
-
-        .phone {
-            position: absolute;
-            overflow: hidden;
-            width: min(280px, 42vw);
-            height: 530px;
-            border: 8px solid #080a09;
-            border-radius: 34px;
-            box-shadow: var(--shadow);
-        }
-
-        .phone-top {
-            position: absolute;
-            top: 12px;
-            left: 50%;
-            z-index: 2;
-            width: 86px;
-            height: 24px;
-            transform: translateX(-50%);
-            border-radius: 999px;
-            background: #080a09;
-        }
-
-        .phone-dark {
-            top: 8px;
-            left: 18px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 44%), #1c211f;
-            transform: rotate(-4deg);
-        }
-
-        .phone-paper {
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(0deg, rgba(86, 72, 56, 0.08) 0 1px, transparent 1px 28px), #f4efe5;
+        .btn-primary:hover { background: #27272a; }
+        .btn-secondary {
+            background: #fff;
             color: var(--ink);
-            transform: rotate(4deg);
+            border-color: var(--line);
         }
-
-        .phone-paper img {
-            display: block;
-            width: 118px;
-            height: 118px;
-            margin: 118px auto 24px;
-            border-radius: 24px;
-            box-shadow: 0 18px 36px rgba(64, 82, 62, 0.22);
+        .btn-secondary:hover { background: var(--surface-2); }
+        .btn .arrow {
+            display: inline-block;
+            transition: transform 0.2s ease;
         }
+        .btn:hover .arrow { transform: translateX(2px); }
 
-        .phone-paper p {
-            margin-bottom: 22px;
-            text-align: center;
-            font-family: "Noto Serif KR", Georgia, serif;
-            font-size: 25px;
-            font-weight: 700;
-        }
-
-        .mood-row {
+        /* ---------- Hero meta strip ---------- */
+        .hero-meta {
             display: grid;
-            width: 180px;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin: 0 auto;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0;
+            margin-top: 80px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .hero-meta > div {
+            padding: 24px 28px 24px 0;
+            border-right: 1px solid var(--line);
+        }
+        .hero-meta > div:last-child { border-right: none; padding-right: 0; padding-left: 28px; }
+        .hero-meta > div:nth-child(2) { padding-left: 28px; padding-right: 28px; }
+
+        .meta-label {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin-bottom: 6px;
+        }
+        .meta-value {
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
-        .mood-row span {
-            height: 32px;
-            border-radius: 999px;
-            background: var(--green);
-        }
-        .mood-row span:nth-child(2) { background: var(--blue); }
-        .mood-row span:nth-child(3) { background: #c9a065; }
-        .mood-row span:nth-child(4) { background: var(--clay); }
-
-        .motion-lines {
-            position: absolute;
-            top: 96px;
-            left: 34px;
-            right: 34px;
-            display: grid;
-            gap: 9px;
+        /* ---------- Apps section ---------- */
+        .section {
+            padding: 120px 0;
+            border-bottom: 1px solid var(--line);
         }
 
-        .motion-lines span {
-            height: 10px;
-            border-radius: 999px;
-            background: rgba(255, 250, 240, 0.1);
-        }
-        .motion-lines span:nth-child(2) { width: 72%; }
-        .motion-lines span:nth-child(3) { width: 48%; }
-
-        .squat-figure {
-            position: absolute;
-            inset: 170px 48px 150px;
-        }
-
-        .squat-figure i {
-            position: absolute;
-            display: block;
-            border-radius: 999px;
-            background: #d8f0d0;
-        }
-
-        .squat-figure i:nth-child(1) { top: 0; left: 74px; width: 42px; height: 42px; }
-        .squat-figure i:nth-child(2) { top: 48px; left: 84px; width: 24px; height: 96px; transform: rotate(10deg); }
-        .squat-figure i:nth-child(3) { top: 112px; left: 48px; width: 90px; height: 18px; transform: rotate(-18deg); }
-        .squat-figure i:nth-child(4) { top: 118px; left: 34px; width: 18px; height: 88px; transform: rotate(18deg); }
-        .squat-figure i:nth-child(5) { top: 194px; left: 22px; width: 78px; height: 16px; }
-
-        .score-tile {
-            position: absolute;
-            right: 24px;
-            bottom: 30px;
-            width: 112px;
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 8px;
-            padding: 14px;
-            background: rgba(255, 255, 255, 0.08);
-        }
-        .score-tile strong, .score-tile span { display: block; }
-        .score-tile strong { font-size: 40px; line-height: 1; }
-        .score-tile span {
-            margin-top: 5px;
-            color: rgba(255, 255, 255, 0.56);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-        }
-
-        .apps-section { padding: 34px 0 88px; }
-        .section-heading {
+        .section-head {
             display: flex;
             align-items: end;
             justify-content: space-between;
-            gap: 24px;
-            margin-bottom: 22px;
+            gap: 32px;
+            margin-bottom: 56px;
         }
 
-        .section-heading h2, .legal-strip h2 {
-            margin-bottom: 0;
-            font-family: "Noto Serif KR", Georgia, serif;
-            font-size: clamp(28px, 4vw, 46px);
+        .section-title {
+            font-size: clamp(32px, 4.2vw, 48px);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            color: var(--ink);
+            text-wrap: balance;
+            max-width: 720px;
+        }
+
+        .section-kicker {
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 14px;
             letter-spacing: 0;
         }
 
+        .section-aside {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            padding-bottom: 8px;
+        }
+
+        /* ---------- App cards ---------- */
         .app-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .app-card, .legal-strip {
-            display: grid;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            background: var(--panel);
-            color: var(--ink);
-            box-shadow: var(--shadow);
+            gap: 16px;
         }
 
         .app-card {
-            min-height: 640px;
-            grid-template-rows: 300px 1fr;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fff;
             overflow: hidden;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .app-card:hover {
+            border-color: #d4d4d8;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 8px 24px -8px rgba(0,0,0,0.06);
         }
 
         .app-visual {
             position: relative;
+            aspect-ratio: 16 / 10;
             overflow: hidden;
+            border-bottom: 1px solid var(--line);
         }
 
+        /* FormLab visual — abstract sensor grid + minimal arc */
         .formlab-visual {
-            background: linear-gradient(135deg, rgba(216, 240, 208, 0.16), transparent 52%), #1b1f1d;
-        }
-
-        .diary-visual {
-            background: repeating-linear-gradient(0deg, rgba(86, 72, 56, 0.08) 0 1px, transparent 1px 30px), #ebe3d2;
-        }
-
-        .diary-visual img {
-            position: absolute;
-            top: 52px;
-            left: 50%;
-            width: 128px;
-            height: 128px;
-            transform: translateX(-50%);
-            border-radius: 28px;
-            box-shadow: 0 20px 48px rgba(64, 82, 62, 0.26);
-        }
-
-        .paper-lines {
-            position: absolute;
-            left: 64px;
-            right: 64px;
-            bottom: 52px;
-            display: grid;
-            gap: 12px;
-        }
-
-        .paper-lines span {
-            height: 10px;
-            border-radius: 999px;
-            background: rgba(80, 73, 60, 0.14);
-        }
-        .paper-lines span:nth-child(2) { width: 72%; }
-        .paper-lines span:nth-child(3) { width: 46%; }
-
-        .sensor-frame {
-            position: absolute;
-            inset: 34px;
-            border: 1px solid rgba(216, 240, 208, 0.2);
-            border-radius: 8px;
             background:
-                linear-gradient(rgba(216, 240, 208, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(216, 240, 208, 0.08) 1px, transparent 1px);
-            background-size: 38px 38px;
+                linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
         }
-
-        .joint, .limb {
+        .formlab-visual .grid {
             position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(0,0,0,0.045) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.045) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 50%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 50%, transparent 100%);
+        }
+        .formlab-visual .arc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .formlab-visual .pose-num {
+            position: absolute;
+            left: 24px;
+            bottom: 22px;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.05em;
+            line-height: 1;
+        }
+        .formlab-visual .pose-num sup {
+            display: inline-block;
+            margin-left: 2px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--muted);
+            vertical-align: super;
+            letter-spacing: 0;
+        }
+        .formlab-visual .pose-label {
+            position: absolute;
+            right: 24px;
+            bottom: 26px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0;
+            text-align: right;
+        }
+
+        /* Diary visual — calendar dot grid */
+        .diary-visual {
+            background: #fafafa;
+            display: grid;
+            place-items: center;
+        }
+        .diary-visual .icon-stage {
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: 96px;
+            height: 96px;
+        }
+        .diary-visual .icon-stage img {
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 12px 32px -8px rgba(0,0,0,0.18);
+        }
+        .diary-visual .dotgrid {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at center, rgba(0,0,0,0.12) 1px, transparent 1.5px);
+            background-size: 18px 18px;
+            mask-image: radial-gradient(ellipse 65% 65% at 50% 55%, transparent 22%, black 60%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 55%, transparent 22%, black 60%, transparent 100%);
+            pointer-events: none;
+        }
+        .diary-visual .month-label {
+            position: absolute;
+            left: 24px;
+            bottom: 22px;
+            color: var(--ink);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .diary-visual .month-label span {
             display: block;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 2px;
+            letter-spacing: 0;
         }
-
-        .joint {
-            width: 14px;
-            height: 14px;
-            border: 2px solid #d8f0d0;
+        .diary-visual .streak-pill {
+            position: absolute;
+            right: 24px;
+            bottom: 22px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border: 1px solid var(--line);
             border-radius: 999px;
-            background: #1b1f1d;
+            background: #fff;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.005em;
         }
-        .joint.head { top: 36px; left: 50%; }
-        .joint.shoulder { top: 80px; left: 45%; }
-        .joint.hip { top: 132px; left: 48%; }
-        .joint.knee { top: 166px; left: 32%; }
-        .joint.ankle { top: 216px; left: 24%; }
-
-        .limb {
-            height: 3px;
-            transform-origin: left center;
+        .diary-visual .streak-pill .dot {
+            width: 5px;
+            height: 5px;
             border-radius: 999px;
-            background: #d8f0d0;
+            background: var(--ink);
         }
-        .limb.torso { top: 92px; left: 48%; width: 62px; transform: rotate(78deg); }
-        .limb.thigh { top: 144px; left: 50%; width: 82px; transform: rotate(148deg); }
-        .limb.shin { top: 176px; left: 35%; width: 64px; transform: rotate(112deg); }
 
         .app-content {
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            padding: 28px;
+            flex: 1;
         }
 
-        .app-title-row {
+        .app-meta {
             display: flex;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        .platform {
-            margin-bottom: 6px;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
             color: var(--muted);
             font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+        .app-meta .sep {
+            width: 3px;
+            height: 3px;
+            border-radius: 999px;
+            background: var(--muted-2);
         }
 
-        h3 {
-            margin-bottom: 0;
-            font-size: 30px;
-            line-height: 1.15;
-        }
-
-        .status-pill {
-            align-self: start;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 8px 10px;
-            color: var(--green-deep);
-            font-size: 12px;
-            font-weight: 800;
-            white-space: nowrap;
+        .app-card h3 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+            color: var(--ink);
         }
 
         .app-summary {
-            margin: 18px 0 0;
-            color: #474740;
-            font-size: 15px;
-            line-height: 1.76;
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 14.5px;
+            line-height: 1.6;
+            text-wrap: pretty;
         }
 
         .feature-list {
             display: grid;
             gap: 10px;
-            margin: 22px 0 24px;
-            padding: 0;
-            list-style: none;
+            margin: 24px 0 28px;
         }
-
         .feature-list li {
             position: relative;
-            padding-left: 18px;
-            color: #514f47;
-            font-size: 14px;
-            line-height: 1.55;
+            padding-left: 22px;
+            color: var(--ink-2);
+            font-size: 13.5px;
+            font-weight: 500;
+            line-height: 1.5;
         }
-
         .feature-list li::before {
             position: absolute;
-            top: 0.72em;
+            top: 7px;
             left: 0;
-            width: 7px;
-            height: 7px;
-            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
             border-radius: 999px;
-            background: var(--green);
+            background:
+                linear-gradient(#fff, #fff) padding-box,
+                var(--line) border-box;
+            border: 1px solid var(--line);
+            content: "";
+        }
+        .feature-list li::after {
+            position: absolute;
+            top: 11px;
+            left: 4px;
+            width: 4px;
+            height: 4px;
+            border-radius: 999px;
+            background: var(--ink);
             content: "";
         }
 
-        .store-row { margin-top: auto; }
-        .store-button {
-            min-width: 132px;
-            border: 1px solid #151616;
-            background: transparent;
-            color: #151616;
+        .store-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
         }
-        .store-button.dark { background: #151616; color: var(--white); }
 
-        .legal-strip {
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 38px;
+            padding: 0 14px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+        .store-btn:hover {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+        .store-btn svg { flex: 0 0 auto; }
+        .store-btn .platform-name { line-height: 1; }
+
+        /* ---------- Footer-ish links section ---------- */
+        .legal {
+            display: grid;
             grid-template-columns: 1fr auto;
             align-items: center;
-            gap: 22px;
-            margin-bottom: 50px;
-            padding: 28px;
+            gap: 40px;
+            padding: 56px 0;
+            border-bottom: 1px solid var(--line);
         }
-
-        .legal-strip .eyebrow { color: var(--green-deep); }
-        .policy-links a {
-            border: 1px solid var(--line);
+        .legal h2 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
             color: var(--ink);
         }
-
-        .site-footer {
+        .legal p {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .legal-links {
             display: flex;
-            justify-content: space-between;
-            width: min(1120px, calc(100vw - 32px));
-            margin: 0 auto;
-            padding: 0 0 42px;
-            color: rgba(255, 250, 240, 0.58);
+            gap: 4px;
+        }
+        .legal-links a {
+            padding: 9px 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: var(--ink);
             font-size: 13px;
+            font-weight: 500;
+            transition: background 0.15s ease, border-color 0.15s ease;
+            white-space: nowrap;
+        }
+        .legal-links a:hover { background: var(--surface-2); border-color: #d4d4d8; }
+
+        /* ---------- Footer ---------- */
+        .site-footer {
+            padding: 28px 0 40px;
+        }
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .footer-inner a:hover { color: var(--ink); }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 880px) {
+            .container { padding: 0 24px; }
+            .hero { padding: 80px 0 72px; }
+            .hero-meta { grid-template-columns: 1fr; }
+            .hero-meta > div {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+                padding: 20px 0 !important;
+            }
+            .hero-meta > div:last-child { border-bottom: none; }
+            .section { padding: 80px 0; }
+            .section-head { flex-direction: column; align-items: start; gap: 8px; }
+            .app-grid { grid-template-columns: 1fr; }
+            .legal { grid-template-columns: 1fr; gap: 18px; }
         }
 
-        .site-footer a { text-decoration: none; }
-
-        @media (max-width: 900px) {
-            .hero, .app-grid, .legal-strip { grid-template-columns: 1fr; }
-            .hero { min-height: auto; padding-top: 34px; }
-            .hero-board { min-height: 500px; }
-            .phone { width: min(260px, 58vw); height: 480px; }
-        }
-
-        @media (max-width: 640px) {
-            .site-header, main, .site-footer { width: min(100vw - 22px, 1120px); }
-            .top-nav a { padding: 8px 9px; font-size: 12px; }
-            .brand span:last-child { display: none; }
-            .lead { font-size: 16px; }
-            .hero-board { min-height: 420px; }
-            .phone {
-                width: 210px;
-                height: 390px;
-                border-width: 7px;
-                border-radius: 28px;
-            }
-            .phone-paper img {
-                width: 90px;
-                height: 90px;
-                margin-top: 94px;
-                border-radius: 20px;
-            }
-            .phone-paper p { font-size: 20px; }
-            .phone-dark { left: 0; }
-            .app-card { min-height: 0; grid-template-rows: 240px auto; }
-            .app-content { padding: 20px; }
-            .app-title-row { display: block; }
-            .status-pill { display: inline-flex; margin-top: 14px; }
-            .store-button, .primary-link, .secondary-link { width: 100%; }
-            .legal-strip { padding: 22px; }
-            .site-footer { display: grid; gap: 10px; }
+        @media (max-width: 520px) {
+            .container { padding: 0 20px; }
+            .top-nav .nav-link[data-hide-sm] { display: none; }
+            .hero { padding: 64px 0 56px; }
+            .hero h1 { letter-spacing: -0.04em; }
+            .hero-lead { font-size: 16.5px; }
+            .app-content { padding: 22px; }
+            .app-card h3 { font-size: 22px; }
+            .formlab-visual .pose-num { font-size: 48px; }
+            .footer-inner { flex-direction: column; align-items: start; gap: 8px; }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <a class="brand" href="/" aria-label="Acconecto Store home">
-            <span class="brand-mark">A</span>
-            <span>Acconecto Store</span>
-        </a>
-        <nav class="top-nav" aria-label="주요 링크">
-            <a href="#apps">Apps</a>
-            <a href="/support.html">Support</a>
-            <a href="/privacy.html">Privacy</a>
-        </nav>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a class="brand" href="/" aria-label="Acconecto home">
+                <span class="brand-mark">A</span>
+                <span>Acconecto</span>
+            </a>
+            <nav class="top-nav" aria-label="주요 링크">
+                <a class="nav-link" href="#apps">Apps</a>
+                <a class="nav-link" href="/support.html" data-hide-sm>Support</a>
+                <a class="nav-link" href="/privacy.html" data-hide-sm>Privacy</a>
+                <a class="nav-cta" href="mailto:acconecto@gmail.com">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- Hero -->
         <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">Mobile apps by Acconecto</p>
-                <h1>작게 만들고,<br>매일 쓰이게.</h1>
-                <p class="lead">운동 자세를 바로잡는 AI 코치부터, 하루의 마음을 조용히 정리하는 감정 일기장까지. Acconecto의 앱을 한 곳에서 연결합니다.</p>
+            <div class="container">
+                <span class="eyebrow">
+                    <span class="dot" aria-hidden="true"></span>
+                    Apps by Acconecto
+                </span>
+
+                <h1>
+                    작게 만들고,<br>
+                    <span class="quiet">매일 쓰이게.</span>
+                </h1>
+
+                <p class="hero-lead">
+                    운동 자세를 바로잡는 AI 코치부터, 하루의 마음을 조용히 정리하는 감정 일기장까지.
+                    Acconecto가 만든 모바일 앱을 한 곳에서 만나보세요.
+                </p>
+
                 <div class="hero-actions">
-                    <a class="primary-link" href="#apps">앱 보러가기</a>
-                    <a class="secondary-link" href="mailto:acconecto@gmail.com">문의하기</a>
+                    <a class="btn btn-primary" href="#apps">
+                        앱 둘러보기
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="btn btn-secondary" href="mailto:acconecto@gmail.com">문의하기</a>
                 </div>
-            </div>
 
-            <div class="hero-board" aria-hidden="true">
-                <div class="phone phone-dark">
-                    <div class="phone-top"></div>
-                    <div class="motion-lines">
-                        <span></span><span></span><span></span>
+                <div class="hero-meta">
+                    <div>
+                        <div class="meta-label">Apps released</div>
+                        <div class="meta-value">2 products · iOS / Android</div>
                     </div>
-                    <div class="squat-figure">
-                        <i></i><i></i><i></i><i></i><i></i>
+                    <div>
+                        <div class="meta-label">Based in</div>
+                        <div class="meta-value">Seoul, Republic of Korea</div>
                     </div>
-                    <div class="score-tile">
-                        <strong>92</strong>
-                        <span>FORM</span>
-                    </div>
-                </div>
-                <div class="phone phone-paper">
-                    <div class="phone-top"></div>
-                    <img src="/assets/harumaeumnote-icon.png" alt="">
-                    <p>오늘의 마음</p>
-                    <div class="mood-row">
-                        <span></span><span></span><span></span><span></span>
+                    <div>
+                        <div class="meta-label">Latest update</div>
+                        <div class="meta-value">2026 — FormLab v1</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="apps" class="apps-section">
-            <div class="section-heading">
-                <p class="eyebrow">Available apps</p>
-                <h2>필요한 순간에 바로 열리는 앱들</h2>
-            </div>
+        <!-- Apps -->
+        <section id="apps" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="section-kicker">Available apps</p>
+                        <h2 class="section-title">필요한 순간에 바로 열리는 앱들.</h2>
+                    </div>
+                    <span class="section-aside">02 / Products</span>
+                </div>
 
-            <div class="app-grid">
-                <article class="app-card formlab-card">
-                    <div class="app-visual formlab-visual" aria-hidden="true">
-                        <div class="sensor-frame">
-                            <span class="joint head"></span>
-                            <span class="joint shoulder"></span>
-                            <span class="joint hip"></span>
-                            <span class="joint knee"></span>
-                            <span class="joint ankle"></span>
-                            <span class="limb torso"></span>
-                            <span class="limb thigh"></span>
-                            <span class="limb shin"></span>
+                <div class="app-grid">
+                    <!-- FormLab -->
+                    <article class="app-card">
+                        <div class="app-visual formlab-visual" aria-hidden="true">
+                            <div class="grid"></div>
+                            <svg class="arc" width="220" height="160" viewBox="0 0 220 160" fill="none">
+                                <!-- minimal squat arc / form line -->
+                                <path d="M20 130 Q 110 -20 200 130" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                <path d="M20 130 Q 110 10 200 130" stroke="#0a0a0a" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 4" fill="none" opacity="0.4"/>
+                                <circle cx="20" cy="130" r="4" fill="#0a0a0a"/>
+                                <circle cx="200" cy="130" r="4" fill="#0a0a0a"/>
+                                <circle cx="110" cy="36" r="5" fill="#0a0a0a"/>
+                                <circle cx="110" cy="36" r="10" stroke="#0a0a0a" stroke-width="1" fill="none" opacity="0.25"/>
+                            </svg>
+                            <div class="pose-num">92<sup>/100</sup></div>
+                            <div class="pose-label">Squat<br>form score</div>
                         </div>
-                    </div>
-                    <div class="app-content">
-                        <div class="app-title-row">
-                            <div>
-                                <p class="platform">iPhone only</p>
-                                <h3>FormLab</h3>
+                        <div class="app-content">
+                            <div class="app-meta">
+                                <span>iPhone only</span>
+                                <span class="sep" aria-hidden="true"></span>
+                                <span>App Store</span>
                             </div>
-                            <span class="status-pill">App Store</span>
+                            <h3>FormLab</h3>
+                            <p class="app-summary">
+                                iPhone 카메라와 Apple Vision AI로 스쿼트 자세를 실시간 분석하는 폼 코치.
+                            </p>
+                            <ul class="feature-list">
+                                <li>7가지 폼 이슈 자동 감지</li>
+                                <li>정면 / 측면 분석과 세션 리포트</li>
+                                <li>웨어러블 없이 카메라만으로 시작</li>
+                            </ul>
+                            <div class="store-row">
+                                <a class="store-btn" href="https://apps.apple.com/us/app/formlab/id6758761079?l=ko" target="_blank" rel="noopener">
+                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.4c0-1.7 1.4-2.5 1.4-2.6-.8-1.1-2-1.3-2.4-1.3-1-.1-2 .6-2.5.6S6.7 4.5 5.9 4.5c-1.1 0-2.1.6-2.6 1.6-1.1 1.9-.3 4.7.8 6.3.5.7 1.2 1.6 2 1.5.8 0 1.1-.5 2.1-.5s1.3.5 2.1.5c.9 0 1.4-.7 2-1.5.6-.8.9-1.7.9-1.7s-1.6-.6-1.6-2.3zM10 3.4C10.5 2.8 10.8 2 10.7 1.2c-.7 0-1.5.5-2 1-.4.5-.8 1.3-.7 2.1.8.1 1.6-.4 2-.9z"/></svg>
+                                    <span class="platform-name">App Store</span>
+                                </a>
+                            </div>
                         </div>
-                        <p class="app-summary">iPhone 카메라와 Apple Vision AI로 스쿼트 자세를 실시간 분석하는 폼 코치입니다.</p>
-                        <ul class="feature-list">
-                            <li>7가지 폼 이슈 자동 감지</li>
-                            <li>정면/측면 분석과 세션 리포트</li>
-                            <li>웨어러블 없이 카메라만으로 시작</li>
-                        </ul>
-                        <div class="store-row">
-                            <a class="store-button dark" href="https://apps.apple.com/us/app/formlab/id6758761079?l=ko" target="_blank" rel="noopener">App Store</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="app-card diary-card">
-                    <div class="app-visual diary-visual">
-                        <img src="/assets/harumaeumnote-icon.png" alt="하루결노트 앱 아이콘">
-                        <div class="paper-lines" aria-hidden="true">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </div>
-                    <div class="app-content">
-                        <div class="app-title-row">
-                            <div>
-                                <p class="platform">iOS · Android</p>
-                                <h3>하루결노트</h3>
+                    <!-- 하루결노트 -->
+                    <article class="app-card">
+                        <div class="app-visual diary-visual" aria-hidden="true">
+                            <div class="dotgrid"></div>
+                            <div class="icon-stage">
+                                <img src="assets/harumaeumnote-icon.png" alt="">
                             </div>
-                            <span class="status-pill">Both stores</span>
+                            <div class="month-label">
+                                하루결노트
+                                <span>April · 2026</span>
+                            </div>
+                            <div class="streak-pill">
+                                <span class="dot" aria-hidden="true"></span>
+                                12 day streak
+                            </div>
                         </div>
-                        <p class="app-summary">하루의 감정과 문장을 남기고, 로컬 AI 요약으로 다시 머무는 감정 일기장입니다.</p>
-                        <ul class="feature-list">
-                            <li>감정 팔레트와 달력 기록</li>
-                            <li>Gemma 모델 기반 로컬 요약</li>
-                            <li>기기 안에 저장되는 개인 일기</li>
-                        </ul>
-                        <div class="store-row">
-                            <a class="store-button" href="https://apps.apple.com/kr/search?term=%ED%95%98%EB%A3%A8%EA%B2%B0%EB%85%B8%ED%8A%B8" target="_blank" rel="noopener">App Store</a>
-                            <a class="store-button dark" href="https://play.google.com/store/apps/details?id=com.acconecto.harumaeumnote" target="_blank" rel="noopener">Google Play</a>
+                        <div class="app-content">
+                            <div class="app-meta">
+                                <span>iOS · Android</span>
+                                <span class="sep" aria-hidden="true"></span>
+                                <span>App Store · Google Play</span>
+                            </div>
+                            <h3>하루결노트</h3>
+                            <p class="app-summary">
+                                하루의 감정과 문장을 남기고, 로컬 AI 요약으로 다시 머무는 감정 일기장.
+                            </p>
+                            <ul class="feature-list">
+                                <li>감정 팔레트와 달력 기록</li>
+                                <li>Gemma 모델 기반 로컬 요약</li>
+                                <li>기기 안에 저장되는 개인 일기</li>
+                            </ul>
+                            <div class="store-row">
+                                <a class="store-btn" href="https://apps.apple.com/kr/search?term=%ED%95%98%EB%A3%A8%EA%B2%B0%EB%85%B8%ED%8A%B8" target="_blank" rel="noopener">
+                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M11.6 8.4c0-1.7 1.4-2.5 1.4-2.6-.8-1.1-2-1.3-2.4-1.3-1-.1-2 .6-2.5.6S6.7 4.5 5.9 4.5c-1.1 0-2.1.6-2.6 1.6-1.1 1.9-.3 4.7.8 6.3.5.7 1.2 1.6 2 1.5.8 0 1.1-.5 2.1-.5s1.3.5 2.1.5c.9 0 1.4-.7 2-1.5.6-.8.9-1.7.9-1.7s-1.6-.6-1.6-2.3zM10 3.4C10.5 2.8 10.8 2 10.7 1.2c-.7 0-1.5.5-2 1-.4.5-.8 1.3-.7 2.1.8.1 1.6-.4 2-.9z"/></svg>
+                                    <span class="platform-name">App Store</span>
+                                </a>
+                                <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.acconecto.harumaeumnote" target="_blank" rel="noopener">
+                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true"><path d="M1.5 1.3c-.2.2-.3.5-.3.9v11.6c0 .4.1.7.3.9l.1.1L8 8.1v-.2L1.5 1.3zM10.2 10.2L8 8.1v-.2l2.2-2.2.1.1 2.6 1.5c.7.4.7 1.1 0 1.5l-2.7 1.4zM10.3 10.1L8 7.9 1.4 14.5c.2.2.6.3 1.1 0l7.8-4.4M10.3 5.9L2.5 1.5c-.5-.3-.9-.2-1.1 0L8 8.1l2.3-2.2z"/></svg>
+                                    <span class="platform-name">Google Play</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="legal-strip">
-            <div>
-                <p class="eyebrow">Policies & support</p>
-                <h2>지원과 정책 문서</h2>
-            </div>
-            <div class="policy-links">
-                <a href="/support.html">Support</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms</a>
+        <!-- Legal -->
+        <section class="section" style="padding: 0;">
+            <div class="container">
+                <div class="legal">
+                    <div>
+                        <h2>지원과 정책 문서</h2>
+                        <p>앱 사용 중 도움이 필요하거나 정책을 확인해야 한다면 아래 문서를 참고하세요.</p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="/support.html">Support</a>
+                        <a href="/privacy.html">Privacy</a>
+                        <a href="/terms.html">Terms</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <span>© 2026 Acconecto</span>
-        <a href="mailto:acconecto@gmail.com">acconecto@gmail.com</a>
+        <div class="container footer-inner">
+            <span>© 2026 Acconecto. All rights reserved.</span>
+            <a href="mailto:acconecto@gmail.com">acconecto@gmail.com</a>
+        </div>
     </footer>
+
+    <script>
+        // Header border on scroll
+        const header = document.getElementById('siteHeader');
+        const onScroll = () => {
+            if (window.scrollY > 8) header.classList.add('is-scrolled');
+            else header.classList.remove('is-scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    </script>
 </body>
 </html>
