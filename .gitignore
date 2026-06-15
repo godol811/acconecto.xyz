@@ -1,0 +1,15 @@
+.next/
+out/
+node_modules/
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+*.log
+
+# tooling/build noise
+.omc/
+.omx/
+artifacts/
+*.tsbuildinfo
+.claude/

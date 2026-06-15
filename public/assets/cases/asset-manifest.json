@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/assets/cases/smartcharge-console.svg",
+    "sourceType": "recreated",
+    "publicSafeScope": "sanitized dashboard-style composite only",
+    "redactionNotes": "No credentials, URLs, customer data, real deployment hosts, or private API paths.",
+    "reviewer": "Codex",
+    "reviewDate": "2026-06-15",
+    "metadataStripped": true
+  },
+  {
+    "path": "/assets/cases/vivring-command-center.svg",
+    "sourceType": "recreated",
+    "publicSafeScope": "sanitized VIV Ring wearable product composite only",
+    "redactionNotes": "No bundle IDs, private app names, source paths, customer data, or real screenshots.",
+    "reviewer": "Codex",
+    "reviewDate": "2026-06-15",
+    "metadataStripped": true
+  },
+  {
+    "path": "/assets/cases/nextpros-suite.png",
+    "sourceType": "approved-screenshot",
+    "publicSafeScope": "owner-approved public marketing screen of own product only",
+    "redactionNotes": "Public-facing marketing page only; no admin app, login, customer records, endpoints, or credentials. Captured below the promo banner.",
+    "reviewer": "Codex",
+    "reviewDate": "2026-06-15",
+    "metadataStripped": true
+  },
+  {
+    "path": "/assets/cases/backersby-app.svg",
+    "sourceType": "recreated",
+    "publicSafeScope": "sanitized creator-support app composite only",
+    "redactionNotes": "No real backer data, payment identifiers, production URLs, credentials, or brand marks.",
+    "reviewer": "Codex",
+    "reviewDate": "2026-06-15",
+    "metadataStripped": true
+  },
+  {
+    "path": "/assets/cases/backend-board.svg",
+    "sourceType": "recreated",
+    "publicSafeScope": "generic backend architecture board",
+    "redactionNotes": "Generic API, data, queue, deploy, and QA labels only.",
+    "reviewer": "Codex",
+    "reviewDate": "2026-06-15",
+    "metadataStripped": true
+  }
+]

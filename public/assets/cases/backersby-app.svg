@@ -1,0 +1,364 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Base background -->
+  <rect width="1200" height="800" rx="16" fill="#0d1117"/>
+
+  <!-- ===================== LEFT: MOBILE FRAME ===================== -->
+  <!-- Phone outer shell -->
+  <rect x="40" y="50" width="330" height="660" rx="40" fill="#161b22" stroke="#2a313c" stroke-width="2"/>
+  <!-- Phone screen area -->
+  <rect x="52" y="70" width="306" height="620" rx="28" fill="#0d1117"/>
+  <!-- Notch -->
+  <rect x="165" y="70" width="80" height="24" rx="12" fill="#161b22"/>
+  <!-- Status bar dots -->
+  <circle cx="180" cy="82" r="3" fill="#2a313c"/>
+  <text x="215" y="87" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">9:41</text>
+  <circle cx="235" cy="82" r="2.5" fill="#8b949e"/>
+  <circle cx="242" cy="82" r="2.5" fill="#8b949e"/>
+  <circle cx="249" cy="82" r="2.5" fill="#8b949e"/>
+
+  <!-- App Bar -->
+  <rect x="52" y="94" width="306" height="48" fill="#0d1117"/>
+  <text x="86" y="124" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Discover</text>
+  <!-- Avatar -->
+  <circle cx="328" cy="118" r="16" fill="#1c232c" stroke="#2a313c" stroke-width="1.5"/>
+  <circle cx="328" cy="113" r="6" fill="#35d6a0" opacity="0.7"/>
+  <ellipse cx="328" cy="128" rx="9" ry="6" fill="#35d6a0" opacity="0.5"/>
+
+  <!-- Featured Campaign Card -->
+  <rect x="62" y="148" width="286" height="200" rx="16" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <!-- Cover placeholder gradient -->
+  <defs>
+    <linearGradient id="coverGrad" x1="62" y1="148" x2="348" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c232c"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="progressGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#35d6a0"/>
+      <stop offset="100%" stop-color="#58a6ff"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#35d6a0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#35d6a0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="chartFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="62" y="148" width="286" height="110" rx="16" fill="url(#coverGrad)"/>
+  <!-- Decorative music wave shapes on cover -->
+  <rect x="80" y="168" width="6" height="32" rx="3" fill="#35d6a0" opacity="0.25"/>
+  <rect x="92" y="175" width="6" height="20" rx="3" fill="#35d6a0" opacity="0.2"/>
+  <rect x="104" y="162" width="6" height="42" rx="3" fill="#35d6a0" opacity="0.3"/>
+  <rect x="116" y="170" width="6" height="28" rx="3" fill="#35d6a0" opacity="0.2"/>
+  <rect x="128" y="165" width="6" height="36" rx="3" fill="#35d6a0" opacity="0.28"/>
+  <rect x="140" y="172" width="6" height="24" rx="3" fill="#35d6a0" opacity="0.2"/>
+  <rect x="152" y="160" width="6" height="44" rx="3" fill="#35d6a0" opacity="0.35"/>
+  <rect x="164" y="168" width="6" height="30" rx="3" fill="#35d6a0" opacity="0.22"/>
+  <rect x="176" y="174" width="6" height="20" rx="3" fill="#35d6a0" opacity="0.18"/>
+  <rect x="188" y="162" width="6" height="40" rx="3" fill="#35d6a0" opacity="0.3"/>
+  <rect x="200" y="169" width="6" height="28" rx="3" fill="#58a6ff" opacity="0.2"/>
+  <rect x="212" y="165" width="6" height="34" rx="3" fill="#58a6ff" opacity="0.25"/>
+  <!-- Badge on cover -->
+  <rect x="296" y="158" width="42" height="18" rx="9" fill="#35d6a0" opacity="0.9"/>
+  <text x="317" y="171" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" font-weight="700" fill="#0d1117" text-anchor="middle">MUSIC</text>
+
+  <!-- Campaign title -->
+  <text x="78" y="276" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="14" font-weight="700" fill="#e6edf3">Indie Album · Vol.2</text>
+  <!-- Progress bar track -->
+  <rect x="78" y="284" width="186" height="5" rx="2.5" fill="#2a313c"/>
+  <!-- Progress bar fill 78% -->
+  <rect x="78" y="284" width="145" height="5" rx="2.5" fill="url(#progressGrad)"/>
+  <!-- 78% label -->
+  <text x="270" y="290" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" font-weight="600">78%</text>
+
+  <!-- Raised and backers -->
+  <text x="78" y="305" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="700" fill="#e6edf3">₩12,400,000</text>
+  <text x="78" y="319" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">raised of goal</text>
+  <text x="220" y="305" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="700" fill="#e6edf3">1,240</text>
+  <text x="220" y="319" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">backers</text>
+  <!-- Support button -->
+  <rect x="248" y="326" width="88" height="32" rx="16" fill="#ec6a9c"/>
+  <text x="292" y="347" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Support</text>
+
+  <!-- Campaign list row 1 -->
+  <rect x="62" y="358" width="286" height="62" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <!-- thumb -->
+  <rect x="74" y="368" width="42" height="42" rx="8" fill="#1c232c"/>
+  <rect x="80" y="374" width="4" height="20" rx="2" fill="#f0b429" opacity="0.5"/>
+  <rect x="88" y="378" width="4" height="16" rx="2" fill="#f0b429" opacity="0.4"/>
+  <rect x="96" y="372" width="4" height="24" rx="2" fill="#f0b429" opacity="0.6"/>
+  <rect x="104" y="376" width="4" height="18" rx="2" fill="#f0b429" opacity="0.35"/>
+  <text x="124" y="383" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Short Film Project</text>
+  <text x="124" y="396" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">842 backers</text>
+  <!-- mini progress -->
+  <rect x="124" y="402" width="140" height="4" rx="2" fill="#2a313c"/>
+  <rect x="124" y="402" width="98" height="4" rx="2" fill="#f0b429"/>
+  <text x="272" y="406" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#f0b429">70%</text>
+  <rect x="300" y="370" width="36" height="18" rx="9" fill="#1c232c" stroke="#f0b429" stroke-width="1"/>
+  <text x="318" y="383" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#f0b429" text-anchor="middle">Film</text>
+
+  <!-- Campaign list row 2 -->
+  <rect x="62" y="428" width="286" height="62" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <rect x="74" y="438" width="42" height="42" rx="8" fill="#1c232c"/>
+  <!-- Code/dev icon deco -->
+  <text x="88" y="464" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="18" fill="#58a6ff" opacity="0.6" text-anchor="middle">&lt;/&gt;</text>
+  <text x="124" y="453" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Open Source Toolkit</text>
+  <text x="124" y="466" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">2,130 backers</text>
+  <rect x="124" y="472" width="140" height="4" rx="2" fill="#2a313c"/>
+  <rect x="124" y="472" width="118" height="4" rx="2" fill="#58a6ff"/>
+  <text x="272" y="476" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#58a6ff">84%</text>
+  <rect x="300" y="440" width="36" height="18" rx="9" fill="#1c232c" stroke="#58a6ff" stroke-width="1"/>
+  <text x="318" y="453" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Dev</text>
+
+  <!-- Bottom Tab Bar -->
+  <rect x="52" y="630" width="306" height="60" rx="0" fill="#161b22"/>
+  <rect x="52" y="630" width="306" height="1" fill="#2a313c"/>
+  <!-- Home tab (active) -->
+  <rect x="67" y="640" width="60" height="40" rx="8" fill="#35d6a0" opacity="0.12"/>
+  <!-- Home icon -->
+  <path d="M92 650 L102 642 L112 650 L112 668 L102 668 L102 660 L92 660 Z" fill="none" stroke="#35d6a0" stroke-width="1.8" stroke-linejoin="round"/>
+  <text x="97" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#35d6a0" text-anchor="middle">Home</text>
+  <!-- Search icon -->
+  <circle cx="155" cy="652" r="7" fill="none" stroke="#8b949e" stroke-width="1.8"/>
+  <line x1="160" y1="657" x2="165" y2="662" stroke="#8b949e" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="155" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Explore</text>
+  <!-- Heart icon -->
+  <path d="M200 649 C200 646 197 644 195 646 C193 644 190 646 190 649 C190 653 195 657 195 657 C195 657 200 653 200 649 Z" fill="none" stroke="#8b949e" stroke-width="1.8"/>
+  <text x="195" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Saved</text>
+  <!-- User icon -->
+  <circle cx="245" cy="649" r="6" fill="none" stroke="#8b949e" stroke-width="1.8"/>
+  <path d="M234 668 C234 662 249 658 256 662 L256 668" fill="none" stroke="#8b949e" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="245" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Profile</text>
+
+  <!-- ===================== RIGHT: WEB DASHBOARD ===================== -->
+  <!-- Dashboard outer container -->
+  <rect x="400" y="50" width="760" height="700" rx="16" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+
+  <!-- Dashboard header bar -->
+  <rect x="400" y="50" width="760" height="56" rx="16" fill="#1c232c"/>
+  <rect x="400" y="90" width="760" height="16" fill="#1c232c"/>
+  <rect x="400" y="88" width="760" height="1" fill="#2a313c"/>
+  <text x="432" y="84" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Creator Dashboard</text>
+  <!-- Nav dots -->
+  <circle cx="700" cy="78" r="4" fill="#2a313c"/>
+  <circle cx="714" cy="78" r="4" fill="#2a313c"/>
+  <circle cx="728" cy="78" r="4" fill="#2a313c"/>
+  <!-- User pill -->
+  <rect x="1070" y="62" width="72" height="28" rx="14" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <circle cx="1086" cy="76" r="8" fill="#35d6a0" opacity="0.7"/>
+  <text x="1108" y="81" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#8b949e">Me</text>
+
+  <!-- KPI CARDS ROW -->
+  <!-- KPI 1: Total raised -->
+  <rect x="420" y="122" width="220" height="90" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="444" y="148" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#8b949e">Total Raised</text>
+  <text x="444" y="180" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="26" font-weight="700" fill="#35d6a0">₩86.2M</text>
+  <text x="444" y="200" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">+14.3% this month</text>
+  <!-- up arrow -->
+  <path d="M598 192 L605 182 L612 192" fill="none" stroke="#35d6a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="605" y1="182" x2="605" y2="200" stroke="#35d6a0" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- KPI 2: Supporters -->
+  <rect x="656" y="122" width="220" height="90" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="680" y="148" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#8b949e">Supporters</text>
+  <text x="680" y="180" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="26" font-weight="700" fill="#e6edf3">8,120</text>
+  <text x="680" y="200" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">+386 new this week</text>
+  <path d="M840 192 L847 182 L854 192" fill="none" stroke="#35d6a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="847" y1="182" x2="847" y2="200" stroke="#35d6a0" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- KPI 3: Active Campaigns -->
+  <rect x="892" y="122" width="248" height="90" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="916" y="148" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#8b949e">Active Campaigns</text>
+  <text x="916" y="180" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="26" font-weight="700" fill="#58a6ff">6</text>
+  <text x="916" y="200" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">2 closing this week</text>
+  <!-- Campaign mini bars -->
+  <rect x="990" y="152" width="8" height="36" rx="4" fill="#58a6ff" opacity="0.8"/>
+  <rect x="1003" y="160" width="8" height="28" rx="4" fill="#58a6ff" opacity="0.6"/>
+  <rect x="1016" y="148" width="8" height="40" rx="4" fill="#58a6ff" opacity="0.9"/>
+  <rect x="1029" y="156" width="8" height="32" rx="4" fill="#58a6ff" opacity="0.5"/>
+  <rect x="1042" y="163" width="8" height="25" rx="4" fill="#58a6ff" opacity="0.4"/>
+  <rect x="1055" y="154" width="8" height="34" rx="4" fill="#58a6ff" opacity="0.7"/>
+
+  <!-- CHART CARD -->
+  <rect x="420" y="228" width="480" height="220" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="444" y="254" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Funding Over Time</text>
+  <!-- Time range pills -->
+  <rect x="748" y="240" width="36" height="20" rx="10" fill="#35d6a0" opacity="0.15"/>
+  <text x="766" y="254" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="middle">1M</text>
+  <rect x="790" y="240" width="36" height="20" rx="10" fill="transparent"/>
+  <text x="808" y="254" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">3M</text>
+  <rect x="832" y="240" width="36" height="20" rx="10" fill="transparent"/>
+  <text x="850" y="254" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">1Y</text>
+
+  <!-- Chart axes -->
+  <line x1="450" y1="412" x2="878" y2="412" stroke="#2a313c" stroke-width="1"/>
+  <line x1="450" y1="270" x2="450" y2="412" stroke="#2a313c" stroke-width="1"/>
+  <!-- Y axis labels -->
+  <text x="445" y="415" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">0</text>
+  <text x="445" y="375" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">20M</text>
+  <text x="445" y="335" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">40M</text>
+  <text x="445" y="295" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">60M</text>
+  <!-- Grid lines -->
+  <line x1="450" y1="374" x2="878" y2="374" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="450" y1="334" x2="878" y2="334" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="450" y1="294" x2="878" y2="294" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <!-- X axis labels -->
+  <text x="460" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Jan</text>
+  <text x="522" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Feb</text>
+  <text x="584" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Mar</text>
+  <text x="646" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Apr</text>
+  <text x="708" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">May</text>
+  <text x="770" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Jun</text>
+  <text x="832" y="426" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">Jul</text>
+  <!-- Area fill path -->
+  <path d="M455 405 C480 400 505 392 534 385 C563 378 578 370 606 358 C634 346 648 332 676 314 C704 296 720 286 748 278 C776 270 804 274 832 268 L832 412 L455 412 Z" fill="url(#chartFill)"/>
+  <!-- Line chart -->
+  <polyline points="455,405 534,385 606,358 676,314 748,278 832,268" fill="none" stroke="#35d6a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Data point dots -->
+  <circle cx="455" cy="405" r="4" fill="#35d6a0" stroke="#1c232c" stroke-width="2"/>
+  <circle cx="534" cy="385" r="4" fill="#35d6a0" stroke="#1c232c" stroke-width="2"/>
+  <circle cx="606" cy="358" r="4" fill="#35d6a0" stroke="#1c232c" stroke-width="2"/>
+  <circle cx="676" cy="314" r="4" fill="#35d6a0" stroke="#1c232c" stroke-width="2"/>
+  <circle cx="748" cy="278" r="4" fill="#35d6a0" stroke="#1c232c" stroke-width="2"/>
+  <circle cx="832" cy="268" r="5" fill="#35d6a0" stroke="#1c232c" stroke-width="2.5"/>
+  <!-- Tooltip on last point -->
+  <rect x="810" y="248" width="64" height="22" rx="6" fill="#35d6a0"/>
+  <text x="842" y="263" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">₩86.2M</text>
+
+  <!-- RECENT SUPPORTERS CARD -->
+  <rect x="916" y="228" width="224" height="220" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="940" y="254" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Recent Supporters</text>
+  <!-- Row 1 -->
+  <circle cx="952" cy="283" r="14" fill="#2a313c"/>
+  <text x="952" y="288" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#35d6a0" text-anchor="middle">K</text>
+  <text x="972" y="279" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="600" fill="#e6edf3">Supporter #2481</text>
+  <text x="972" y="292" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">2 min ago</text>
+  <rect x="1080" y="272" width="40" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="1100" y="285" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#35d6a0" text-anchor="middle">Paid</text>
+  <text x="1100" y="297" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">₩5K</text>
+  <!-- divider -->
+  <line x1="930" y1="307" x2="1126" y2="307" stroke="#2a313c" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <circle cx="952" cy="328" r="14" fill="#2a313c"/>
+  <text x="952" y="333" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#f0b429" text-anchor="middle">M</text>
+  <text x="972" y="324" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="600" fill="#e6edf3">Supporter #1077</text>
+  <text x="972" y="337" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">8 min ago</text>
+  <rect x="1080" y="317" width="40" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="1100" y="330" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#35d6a0" text-anchor="middle">Paid</text>
+  <text x="1100" y="342" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">₩10K</text>
+  <!-- divider -->
+  <line x1="930" y1="352" x2="1126" y2="352" stroke="#2a313c" stroke-width="0.5"/>
+  <!-- Row 3 -->
+  <circle cx="952" cy="373" r="14" fill="#2a313c"/>
+  <text x="952" y="378" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#ec6a9c" text-anchor="middle">S</text>
+  <text x="972" y="369" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="600" fill="#e6edf3">Supporter #3302</text>
+  <text x="972" y="382" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">15 min ago</text>
+  <rect x="1080" y="362" width="40" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="1100" y="375" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#35d6a0" text-anchor="middle">Paid</text>
+  <text x="1100" y="387" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">₩2K</text>
+  <!-- View all -->
+  <text x="1028" y="432" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#58a6ff" text-anchor="middle">View all →</text>
+
+  <!-- BOTTOM ROW: Campaign progress table + Community chat -->
+  <!-- Campaign progress table -->
+  <rect x="420" y="462" width="480" height="260" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="444" y="488" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Campaign Progress</text>
+  <!-- Table header -->
+  <rect x="420" y="494" width="480" height="28" fill="#161b22"/>
+  <text x="444" y="512" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">Campaign</text>
+  <text x="620" y="512" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">Raised</text>
+  <text x="710" y="512" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">Progress</text>
+  <text x="818" y="512" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">Status</text>
+  <!-- Row 1 -->
+  <line x1="430" y1="522" x2="890" y2="522" stroke="#2a313c" stroke-width="0.5"/>
+  <circle cx="442" cy="538" r="5" fill="#35d6a0" opacity="0.7"/>
+  <text x="454" y="542" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">Indie Album · Vol.2</text>
+  <text x="620" y="542" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">₩12.4M</text>
+  <rect x="710" y="532" width="90" height="6" rx="3" fill="#2a313c"/>
+  <rect x="710" y="532" width="70" height="6" rx="3" fill="#35d6a0"/>
+  <text x="807" y="541" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0">78%</text>
+  <rect x="820" y="529" width="54" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="847" y="542" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="middle">Active</text>
+  <!-- Row 2 -->
+  <line x1="430" y1="557" x2="890" y2="557" stroke="#2a313c" stroke-width="0.5"/>
+  <circle cx="442" cy="573" r="5" fill="#f0b429" opacity="0.7"/>
+  <text x="454" y="577" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">Short Film Project</text>
+  <text x="620" y="577" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">₩8.9M</text>
+  <rect x="710" y="567" width="90" height="6" rx="3" fill="#2a313c"/>
+  <rect x="710" y="567" width="63" height="6" rx="3" fill="#f0b429"/>
+  <text x="807" y="576" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#f0b429">70%</text>
+  <rect x="820" y="564" width="54" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="847" y="577" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="middle">Active</text>
+  <!-- Row 3 -->
+  <line x1="430" y1="592" x2="890" y2="592" stroke="#2a313c" stroke-width="0.5"/>
+  <circle cx="442" cy="608" r="5" fill="#58a6ff" opacity="0.7"/>
+  <text x="454" y="612" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">Open Source Toolkit</text>
+  <text x="620" y="612" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">₩21.1M</text>
+  <rect x="710" y="602" width="90" height="6" rx="3" fill="#2a313c"/>
+  <rect x="710" y="602" width="76" height="6" rx="3" fill="#58a6ff"/>
+  <text x="807" y="611" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#58a6ff">84%</text>
+  <rect x="820" y="599" width="54" height="18" rx="9" fill="#35d6a0" opacity="0.15"/>
+  <text x="847" y="612" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="middle">Active</text>
+  <!-- Row 4 -->
+  <line x1="430" y1="627" x2="890" y2="627" stroke="#2a313c" stroke-width="0.5"/>
+  <circle cx="442" cy="643" r="5" fill="#ec6a9c" opacity="0.7"/>
+  <text x="454" y="647" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">Podcast Season 3</text>
+  <text x="620" y="647" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">₩6.2M</text>
+  <rect x="710" y="637" width="90" height="6" rx="3" fill="#2a313c"/>
+  <rect x="710" y="637" width="54" height="6" rx="3" fill="#ec6a9c"/>
+  <text x="807" y="646" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#ec6a9c">60%</text>
+  <rect x="820" y="634" width="54" height="18" rx="9" fill="#f0b429" opacity="0.15"/>
+  <text x="847" y="647" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#f0b429" text-anchor="middle">Ending</text>
+  <!-- Row 5 -->
+  <line x1="430" y1="662" x2="890" y2="662" stroke="#2a313c" stroke-width="0.5"/>
+  <circle cx="442" cy="678" r="5" fill="#8b949e" opacity="0.7"/>
+  <text x="454" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">Print Zine Collab</text>
+  <text x="620" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#e6edf3">₩3.8M</text>
+  <rect x="710" y="672" width="90" height="6" rx="3" fill="#2a313c"/>
+  <rect x="710" y="672" width="40" height="6" rx="3" fill="#8b949e"/>
+  <text x="807" y="681" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e">44%</text>
+  <rect x="820" y="669" width="54" height="18" rx="9" fill="#2a313c"/>
+  <text x="847" y="682" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Draft</text>
+
+  <!-- COMMUNITY CHAT CARD -->
+  <rect x="916" y="462" width="224" height="260" rx="12" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <!-- Live indicator -->
+  <circle cx="938" cy="487" r="5" fill="#35d6a0"/>
+  <text x="948" y="491" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Community</text>
+  <text x="1086" y="491" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="end">Live</text>
+  <!-- divider -->
+  <line x1="926" y1="500" x2="1130" y2="500" stroke="#2a313c" stroke-width="0.5"/>
+
+  <!-- Bubble 1 (received) -->
+  <circle cx="944" cy="524" r="12" fill="#2a313c"/>
+  <text x="944" y="529" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0" text-anchor="middle">A</text>
+  <rect x="962" y="510" width="148" height="34" rx="10" fill="#2a313c"/>
+  <text x="972" y="524" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#e6edf3">Just backed the album!</text>
+  <text x="972" y="537" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e">So excited 🎵</text>
+  <text x="1116" y="548" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">2m</text>
+
+  <!-- Bubble 2 (received) -->
+  <circle cx="944" cy="576" r="12" fill="#2a313c"/>
+  <text x="944" y="581" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#f0b429" text-anchor="middle">B</text>
+  <rect x="962" y="562" width="148" height="34" rx="10" fill="#2a313c"/>
+  <text x="972" y="576" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#e6edf3">Can't wait for the</text>
+  <text x="972" y="589" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#e6edf3">vinyl edition!</text>
+  <text x="1116" y="600" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">5m</text>
+
+  <!-- Bubble 3 (sent) -->
+  <rect x="926" y="614" width="170" height="34" rx="10" fill="#35d6a0" opacity="0.15" stroke="#35d6a0" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="936" y="628" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#e6edf3">Thank you all so much</text>
+  <text x="936" y="641" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="10" fill="#35d6a0">— the creator</text>
+  <text x="1102" y="652" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">Just now</text>
+
+  <!-- Chat input -->
+  <rect x="926" y="668" width="178" height="32" rx="16" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="942" y="689" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="11" fill="#2a313c">Message...</text>
+  <!-- Send button -->
+  <circle cx="1112" cy="684" r="12" fill="#35d6a0" opacity="0.9"/>
+  <path d="M1107 684 L1113 681 L1113 687 Z" fill="#0d1117"/>
+
+  <!-- Subtle bottom accent line on phone -->
+  <rect x="177" y="688" width="50" height="4" rx="2" fill="#e6edf3" opacity="0.2"/>
+</svg>

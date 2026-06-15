@@ -1,0 +1,39 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "suspicious": {
+        "noExplicitAny": "error"
+      },
+      "style": {
+        "useImportType": "error"
+      },
+      "correctness": {
+        "noUnusedImports": "error"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!artifacts",
+      "!out",
+      "!.next",
+      "!node_modules",
+      "!playwright-report",
+      "!test-results",
+      "!public/assets",
+      "!public/*.html",
+      "!.omc",
+      "!.omx"
+    ]
+  }
+}

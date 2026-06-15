@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Base background -->
+  <rect width="1200" height="800" rx="16" fill="#0d1117"/>
+
+  <!-- Left Sidebar background -->
+  <rect x="0" y="0" width="72" height="800" fill="#161b22"/>
+  <rect x="0" y="0" width="72" height="800" rx="16" fill="#161b22"/>
+  <rect x="16" y="0" width="56" height="800" fill="#161b22"/>
+  <rect x="0" y="16" width="72" height="768" fill="#161b22"/>
+  <!-- Sidebar right border -->
+  <line x1="72" y1="0" x2="72" y2="800" stroke="#2a313c" stroke-width="1"/>
+
+  <!-- App logo -->
+  <rect x="20" y="20" width="32" height="32" rx="8" fill="#35d6a0"/>
+  <circle cx="36" cy="36" r="6" fill="#0d1117"/>
+  <circle cx="36" cy="36" r="3" fill="#35d6a0"/>
+
+  <!-- Nav icon 1: Home (highlighted) -->
+  <rect x="20" y="72" width="32" height="32" rx="8" fill="#35d6a015" stroke="#35d6a0" stroke-width="1.5"/>
+  <path d="M36 80l8 7v10h-5v-5h-6v5h-5V87l8-7z" fill="#35d6a0"/>
+
+  <!-- Nav icon 2: Grid -->
+  <rect x="20" y="120" width="32" height="32" rx="8" fill="none"/>
+  <rect x="27" y="127" width="6" height="6" rx="1.5" fill="#8b949e"/>
+  <rect x="37" y="127" width="6" height="6" rx="1.5" fill="#8b949e"/>
+  <rect x="27" y="137" width="6" height="6" rx="1.5" fill="#8b949e"/>
+  <rect x="37" y="137" width="6" height="6" rx="1.5" fill="#8b949e"/>
+
+  <!-- Nav icon 3: Bar chart -->
+  <rect x="20" y="168" width="32" height="32" rx="8" fill="none"/>
+  <rect x="27" y="183" width="4" height="9" rx="1" fill="#8b949e"/>
+  <rect x="34" y="178" width="4" height="14" rx="1" fill="#8b949e"/>
+  <rect x="41" y="175" width="4" height="17" rx="1" fill="#8b949e"/>
+
+  <!-- Nav icon 4: Device -->
+  <rect x="20" y="216" width="32" height="32" rx="8" fill="none"/>
+  <rect x="26" y="224" width="20" height="13" rx="2" stroke="#8b949e" stroke-width="1.5" fill="none"/>
+  <rect x="33" y="237" width="6" height="3" rx="1" fill="#8b949e"/>
+
+  <!-- Nav icon 5: Settings -->
+  <rect x="20" y="264" width="32" height="32" rx="8" fill="none"/>
+  <circle cx="36" cy="280" r="5" stroke="#8b949e" stroke-width="1.5" fill="none"/>
+  <line x1="36" y1="271" x2="36" y2="274" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="36" y1="286" x2="36" y2="289" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="27" y1="280" x2="30" y2="280" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="280" x2="45" y2="280" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Sidebar avatar bottom -->
+  <circle cx="36" cy="756" r="14" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <circle cx="36" cy="752" r="5" fill="#8b949e"/>
+  <path d="M24 768c0-6.6 5.4-12 12-12s12 5.4 12 12" fill="#8b949e" clip-path="url(#avatarClip)"/>
+  <clipPath id="avatarClip">
+    <circle cx="36" cy="756" r="14"/>
+  </clipPath>
+
+  <!-- Top Header -->
+  <rect x="72" y="0" width="1128" height="60" fill="#161b22"/>
+  <!-- Header top-right radius -->
+  <rect x="1184" y="0" width="16" height="60" fill="#161b22"/>
+  <rect x="1072" y="0" width="128" height="16" fill="#161b22"/>
+  <line x1="72" y1="60" x2="1200" y2="60" stroke="#2a313c" stroke-width="1"/>
+
+  <!-- Header title -->
+  <text x="96" y="37" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="600" fill="#e6edf3">Compatibility Console</text>
+
+  <!-- Search pill -->
+  <rect x="374" y="16" width="220" height="28" rx="14" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <circle cx="393" cy="30" r="5.5" stroke="#8b949e" stroke-width="1.5" fill="none"/>
+  <line x1="396" y1="33.5" x2="400" y2="37.5" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="408" y="35" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#8b949e">Search devices…</text>
+  <text x="580" y="35" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">⌘K</text>
+
+  <!-- Bell icon -->
+  <circle cx="1132" cy="30" r="14" fill="#1c232c"/>
+  <path d="M1132 20c-3.9 0-7 3.1-7 7v3.5l-1.5 2.5h17l-1.5-2.5V27c0-3.9-3.1-7-7-7z" fill="#8b949e"/>
+  <path d="M1129.5 33c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5" fill="#8b949e"/>
+  <circle cx="1138" cy="23" r="3.5" fill="#f85149"/>
+
+  <!-- Avatar -->
+  <circle cx="1170" cy="30" r="16" fill="#35d6a020" stroke="#35d6a060" stroke-width="1.5"/>
+  <text x="1170" y="35" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" fill="#35d6a0" text-anchor="middle">JK</text>
+
+  <!-- KPI Cards -->
+  <!-- Card 1 -->
+  <rect x="88" y="76" width="230" height="94" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="108" y="101" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">DEVICES TESTED</text>
+  <text x="108" y="135" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="30" font-weight="700" fill="#e6edf3">1,284</text>
+  <text x="108" y="155" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#35d6a0">▲ 48 this week</text>
+
+  <!-- Card 2 -->
+  <rect x="330" y="76" width="230" height="94" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="350" y="101" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">PASS RATE</text>
+  <text x="350" y="135" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="30" font-weight="700" fill="#35d6a0">92%</text>
+  <text x="350" y="155" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#35d6a0">▲ 2.1% vs last week</text>
+
+  <!-- Card 3 -->
+  <rect x="572" y="76" width="230" height="94" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="592" y="101" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">IN QUEUE</text>
+  <text x="592" y="135" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="30" font-weight="700" fill="#f0b429">37</text>
+  <text x="592" y="155" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#f0b429">▲ 12 added today</text>
+
+  <!-- Card 4 -->
+  <rect x="814" y="76" width="230" height="94" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="834" y="101" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">FAILED</text>
+  <text x="834" y="135" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="30" font-weight="700" fill="#f85149">18</text>
+  <text x="834" y="155" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#f85149">▼ 3 from yesterday</text>
+
+  <!-- Main table panel -->
+  <rect x="88" y="188" width="716" height="574" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+
+  <!-- Table title row -->
+  <text x="112" y="218" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="600" fill="#e6edf3">Device Matrix</text>
+  <text x="112" y="234" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">1,284 entries · active profile</text>
+
+  <!-- Export button -->
+  <rect x="712" y="208" width="68" height="26" rx="6" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="746" y="225" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Export</text>
+
+  <!-- Table header -->
+  <rect x="88" y="248" width="716" height="34" rx="0" fill="#1c232c"/>
+  <rect x="100" y="248" width="704" height="34" fill="#1c232c"/>
+  <rect x="88" y="260" width="716" height="22" fill="#1c232c"/>
+  <line x1="88" y1="248" x2="804" y2="248" stroke="#2a313c" stroke-width="1"/>
+  <line x1="88" y1="282" x2="804" y2="282" stroke="#2a313c" stroke-width="1"/>
+  <text x="112" y="269" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">DEVICE</text>
+  <text x="316" y="269" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">ADAPTER</text>
+  <text x="496" y="269" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">WATTAGE</text>
+  <text x="618" y="269" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">RESULT</text>
+  <text x="740" y="269" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.8">TIME</text>
+
+  <!-- Row 1: Pass -->
+  <line x1="88" y1="322" x2="804" y2="322" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="306" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Model A12</text>
+  <text x="112" y="320" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-00192 · USB-C</text>
+  <text x="316" y="309" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 65W</text>
+  <text x="496" y="309" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">65 W</text>
+  <rect x="608" y="297" width="52" height="20" rx="10" fill="#35d6a018"/>
+  <text x="634" y="311" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#35d6a0" text-anchor="middle">Pass</text>
+  <text x="740" y="309" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">2m 14s</text>
+
+  <!-- Row 2: Testing -->
+  <rect x="88" y="322" width="716" height="40" fill="#1c232c10"/>
+  <line x1="88" y1="362" x2="804" y2="362" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="346" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Pro Slate X</text>
+  <text x="112" y="360" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-00847 · USB-C</text>
+  <text x="316" y="349" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 30W</text>
+  <text x="496" y="349" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">30 W</text>
+  <rect x="606" y="337" width="66" height="20" rx="10" fill="#f0b42918"/>
+  <text x="639" y="351" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#f0b429" text-anchor="middle">Testing</text>
+  <text x="740" y="349" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">running…</text>
+
+  <!-- Row 3: Pass -->
+  <line x1="88" y1="402" x2="804" y2="402" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="386" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Ultra Pad 11</text>
+  <text x="112" y="400" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-01204 · USB-C</text>
+  <text x="316" y="389" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 100W</text>
+  <text x="496" y="389" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">100 W</text>
+  <rect x="608" y="377" width="52" height="20" rx="10" fill="#35d6a018"/>
+  <text x="634" y="391" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#35d6a0" text-anchor="middle">Pass</text>
+  <text x="740" y="389" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">1m 58s</text>
+
+  <!-- Row 4: Failed -->
+  <rect x="88" y="402" width="716" height="40" fill="#1c232c10"/>
+  <line x1="88" y1="442" x2="804" y2="442" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="426" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Charge Hub V3</text>
+  <text x="112" y="440" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-00391 · USB-A</text>
+  <text x="316" y="429" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 18W</text>
+  <text x="496" y="429" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">18 W</text>
+  <rect x="606" y="417" width="58" height="20" rx="10" fill="#f8514918"/>
+  <text x="635" y="431" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#f85149" text-anchor="middle">Failed</text>
+  <text x="740" y="429" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">0m 42s</text>
+
+  <!-- Row 5: Pass -->
+  <line x1="88" y1="482" x2="804" y2="482" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="466" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Model B7 Lite</text>
+  <text x="112" y="480" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-00556 · USB-C</text>
+  <text x="316" y="469" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 45W</text>
+  <text x="496" y="469" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">45 W</text>
+  <rect x="608" y="457" width="52" height="20" rx="10" fill="#35d6a018"/>
+  <text x="634" y="471" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#35d6a0" text-anchor="middle">Pass</text>
+  <text x="740" y="469" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">3m 07s</text>
+
+  <!-- Row 6: Testing -->
+  <rect x="88" y="482" width="716" height="40" fill="#1c232c10"/>
+  <line x1="88" y1="522" x2="804" y2="522" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="506" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Notebook Edge S</text>
+  <text x="112" y="520" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-00773 · USB-C</text>
+  <text x="316" y="509" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 90W</text>
+  <text x="496" y="509" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">90 W</text>
+  <rect x="606" y="497" width="66" height="20" rx="10" fill="#f0b42918"/>
+  <text x="639" y="511" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#f0b429" text-anchor="middle">Testing</text>
+  <text x="740" y="509" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">running…</text>
+
+  <!-- Row 7: Failed -->
+  <line x1="88" y1="562" x2="804" y2="562" stroke="#2a313c" stroke-width="0.5"/>
+  <text x="112" y="546" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500" fill="#e6edf3">Compact Dock 4</text>
+  <text x="112" y="560" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e">SN-01088 · USB-A</text>
+  <text x="316" y="549" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">Adapter 20W</text>
+  <text x="496" y="549" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#e6edf3">20 W</text>
+  <rect x="606" y="537" width="58" height="20" rx="10" fill="#f8514918"/>
+  <text x="635" y="551" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" fill="#f85149" text-anchor="middle">Failed</text>
+  <text x="740" y="549" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">1m 03s</text>
+
+  <!-- Pagination -->
+  <line x1="88" y1="724" x2="804" y2="724" stroke="#2a313c" stroke-width="1"/>
+  <text x="112" y="746" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">Showing 7 of 1,284 entries</text>
+  <rect x="638" y="732" width="28" height="22" rx="5" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="652" y="747" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">‹</text>
+  <rect x="670" y="732" width="28" height="22" rx="5" fill="#35d6a018" stroke="#35d6a040" stroke-width="1"/>
+  <text x="684" y="747" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#35d6a0" text-anchor="middle">1</text>
+  <rect x="702" y="732" width="28" height="22" rx="5" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="716" y="747" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">2</text>
+  <rect x="734" y="732" width="28" height="22" rx="5" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="748" y="747" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">›</text>
+  <rect x="766" y="732" width="28" height="22" rx="5" fill="#1c232c" stroke="#2a313c" stroke-width="1"/>
+  <text x="780" y="747" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">»</text>
+
+  <!-- Right panel: Result Breakdown (donut) -->
+  <rect x="820" y="188" width="292" height="288" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="844" y="216" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Result Breakdown</text>
+  <text x="844" y="232" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">All-time distribution</text>
+
+  <!-- Donut chart: center (966, 316), r=58, stroke-width=20 -->
+  <!-- circ = 2*pi*58 = 364.4 -->
+  <!-- Pass 92%: dash = 335.2 -->
+  <circle cx="966" cy="316" r="58" fill="none" stroke="#2a313c" stroke-width="20"/>
+  <circle cx="966" cy="316" r="58" fill="none" stroke="#35d6a0" stroke-width="20"
+    stroke-dasharray="335.3 364.4" stroke-dashoffset="91.1"
+    transform="rotate(-90 966 316)"/>
+  <!-- Failed ~5.6%: dash = 20.4 -->
+  <circle cx="966" cy="316" r="58" fill="none" stroke="#f85149" stroke-width="20"
+    stroke-dasharray="20.4 364.4" stroke-dashoffset="-244.2"
+    transform="rotate(-90 966 316)"/>
+  <!-- Testing ~2.4%: dash = 8.7 -->
+  <circle cx="966" cy="316" r="58" fill="none" stroke="#f0b429" stroke-width="20"
+    stroke-dasharray="8.7 364.4" stroke-dashoffset="-264.6"
+    transform="rotate(-90 966 316)"/>
+
+  <!-- Donut center text -->
+  <text x="966" y="309" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="24" font-weight="700" fill="#e6edf3" text-anchor="middle">92%</text>
+  <text x="966" y="326" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">pass rate</text>
+
+  <!-- Legend -->
+  <line x1="844" y1="390" x2="1096" y2="390" stroke="#2a313c" stroke-width="1"/>
+  <rect x="844" y="402" width="8" height="8" rx="2" fill="#35d6a0"/>
+  <text x="858" y="411" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">Pass</text>
+  <text x="1100" y="411" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#e6edf3" text-anchor="end">1,181</text>
+
+  <rect x="844" y="420" width="8" height="8" rx="2" fill="#f0b429"/>
+  <text x="858" y="429" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">Testing</text>
+  <text x="1100" y="429" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#e6edf3" text-anchor="end">37</text>
+
+  <rect x="844" y="438" width="8" height="8" rx="2" fill="#f85149"/>
+  <text x="858" y="447" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">Failed</text>
+  <text x="1100" y="447" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#e6edf3" text-anchor="end">66</text>
+
+  <!-- Right panel: Weekly Throughput -->
+  <rect x="820" y="492" width="292" height="270" rx="12" fill="#161b22" stroke="#2a313c" stroke-width="1"/>
+  <text x="844" y="520" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Weekly Throughput</text>
+  <text x="844" y="536" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#8b949e">Devices processed per day</text>
+
+  <!-- Chart grid lines -->
+  <line x1="848" y1="718" x2="1100" y2="718" stroke="#2a313c" stroke-width="1"/>
+  <line x1="848" y1="686" x2="1100" y2="686" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <line x1="848" y1="654" x2="1100" y2="654" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <line x1="848" y1="622" x2="1100" y2="622" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <line x1="848" y1="590" x2="1100" y2="590" stroke="#2a313c" stroke-width="0.5" stroke-dasharray="4 3"/>
+
+  <!-- Y-axis labels -->
+  <text x="842" y="722" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="end">0</text>
+  <text x="842" y="690" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="end">50</text>
+  <text x="842" y="658" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="end">100</text>
+  <text x="842" y="626" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="end">150</text>
+  <text x="842" y="594" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="end">200</text>
+
+  <!-- Bar chart: 7 bars, each 28px wide, x starts at 856, spacing 36px -->
+  <!-- Scale: 200 = 128px height. Each unit = 0.64px. Base y=718 -->
+  <!-- Mon 120: h=76.8 top=641 -->
+  <rect x="856" y="641" width="26" height="77" rx="4" fill="#58a6ff30" stroke="#58a6ff" stroke-width="1"/>
+  <text x="869" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Mon</text>
+
+  <!-- Tue 160: h=102.4 top=616 -->
+  <rect x="892" y="616" width="26" height="102" rx="4" fill="#58a6ff30" stroke="#58a6ff" stroke-width="1"/>
+  <text x="905" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Tue</text>
+
+  <!-- Wed 140: h=89.6 top=628 -->
+  <rect x="928" y="628" width="26" height="90" rx="4" fill="#58a6ff30" stroke="#58a6ff" stroke-width="1"/>
+  <text x="941" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Wed</text>
+
+  <!-- Thu 195 (peak): h=124.8 top=593 — accent color -->
+  <rect x="964" y="593" width="26" height="125" rx="4" fill="#35d6a030" stroke="#35d6a0" stroke-width="1.5"/>
+  <text x="977" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#35d6a0" text-anchor="middle">Thu</text>
+
+  <!-- Fri 175: h=112 top=606 -->
+  <rect x="1000" y="606" width="26" height="112" rx="4" fill="#58a6ff30" stroke="#58a6ff" stroke-width="1"/>
+  <text x="1013" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Fri</text>
+
+  <!-- Sat 90: h=57.6 top=660 — dimmed -->
+  <rect x="1036" y="660" width="26" height="58" rx="4" fill="#58a6ff18" stroke="#58a6ff60" stroke-width="1"/>
+  <text x="1049" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Sat</text>
+
+  <!-- Sun 55: h=35.2 top=683 — dimmed -->
+  <rect x="1072" y="683" width="26" height="35" rx="4" fill="#58a6ff18" stroke="#58a6ff60" stroke-width="1"/>
+  <text x="1085" y="732" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Sun</text>
+
+  <!-- Outer border for app frame -->
+  <rect width="1200" height="800" rx="16" fill="none" stroke="#2a313c" stroke-width="1.5"/>
+</svg>
