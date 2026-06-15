@@ -17,13 +17,13 @@ export const enCopy: PortfolioCopy = {
     eyebrow: "Aconecto · registered software studio",
     title: "Jongchan Ko / Aconecto",
     subtitle:
-      "A full-stack engineer who isn't tied to one stack. Across ~5 years I've shipped on iOS, Android, web, backend, and cloud — and I learn whatever spec your project needs, owning it from scope to release.",
+      "How something is built matters more than what it's built with. Across ~5 years of shipping products myself, I've learned to define the real problem and carry it to something that actually runs — end to end.",
     availability: "Available for new 2026 projects · usually replies within one business day",
     proof: [
       "~5 yrs full-stack",
-      "stack-agnostic",
-      "web · app · backend · cloud",
+      "craft over spec",
       "scope → release, solo",
+      "ships, then keeps running",
     ],
   },
   business: {
@@ -36,12 +36,12 @@ export const enCopy: PortfolioCopy = {
     eyebrow: "Why Aconecto",
     title: "Built to lower the risk of outsourcing",
     intro:
-      "Stack is just a tool. I work by what gets better when you hand it over — not by which technology happens to be used.",
+      "The stack is secondary. The same spec turns out differently depending on how it's built — and that 'how' is where I focus.",
     points: [
       {
-        title: "Handles any spec",
+        title: "Implementation over spec",
         summary:
-          "I don't insist on one stack. I've shipped across iOS, Flutter, Next.js, Ktor, FastAPI, gRPC, AWS and more, and I pick up whatever technology your project runs on.",
+          "Which technology you use is secondary. What decides the outcome is the quality of the build — defining the real problem, closing the edge cases, and finishing in a form that actually runs in production.",
       },
       {
         title: "One owner, end to end",
