@@ -17,9 +17,14 @@ export const koCopy: PortfolioCopy = {
     eyebrow: "Aconecto · 등록 소프트웨어 스튜디오",
     title: "Jongchan Ko / 아코넥토",
     subtitle:
-      "iOS·안드로이드·웹·백엔드·클라우드까지 약 5년간 끝까지 만들어 온 풀스택 엔지니어입니다. 기획부터 배포까지 한 사람이 책임지고, AI 멀티에이전트 워크플로로 속도와 품질을 동시에 잡습니다.",
+      "특정 스택에 얽매이지 않는 풀스택 엔지니어입니다. iOS·안드로이드·웹·백엔드·클라우드까지 약 5년간 다양한 환경에서 제품을 출시했고, 프로젝트가 요구하는 어떤 스펙이든 빠르게 익혀 기획부터 배포까지 끝까지 책임집니다.",
     availability: "2026년 신규 프로젝트 협의 가능 · 보통 1영업일 내 회신",
-    proof: ["약 5년차 풀스택", "Next.js · Ktor · gRPC", "Flutter · iOS · Swift", "AWS · CI/CD"],
+    proof: [
+      "약 5년차 풀스택",
+      "스택 무관 · 적응형",
+      "웹 · 앱 · 백엔드 · 클라우드",
+      "기획 → 배포 단독",
+    ],
   },
   business: {
     badge: "아코넥토 사업자 등록",
@@ -30,9 +35,13 @@ export const koCopy: PortfolioCopy = {
   trust: {
     eyebrow: "왜 아코넥토인가",
     title: "외주의 리스크를 줄이는 방식으로 일합니다",
-    intro:
-      "‘만들 수 있는가’보다 ‘맡기면 무엇이 좋아지는가’를 먼저 생각합니다. 의사결정에 필요한 것만 명확하게 전달합니다.",
+    intro: "스택은 도구일 뿐입니다. ‘무엇으로 만드느냐’보다 ‘맡기면 무엇이 좋아지느냐’로 일합니다.",
     points: [
+      {
+        title: "어떤 스펙이든 소화",
+        summary:
+          "특정 스택을 고집하지 않습니다. iOS·Flutter·Next.js·Ktor·FastAPI·gRPC·AWS 등 다양한 환경에서 출시해 왔고, 프로젝트가 쓰는 기술이 무엇이든 빠르게 익혀 끝냅니다.",
+      },
       {
         title: "한 사람이 끝까지",
         summary:

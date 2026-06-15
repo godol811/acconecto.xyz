@@ -17,9 +17,14 @@ export const enCopy: PortfolioCopy = {
     eyebrow: "Aconecto · registered software studio",
     title: "Jongchan Ko / Aconecto",
     subtitle:
-      "A full-stack engineer with ~5 years across iOS, Android, web, backend, and cloud. One person owns the build from scope to release, using AI multi-agent workflows to move fast without dropping quality.",
+      "A full-stack engineer who isn't tied to one stack. Across ~5 years I've shipped on iOS, Android, web, backend, and cloud — and I learn whatever spec your project needs, owning it from scope to release.",
     availability: "Available for new 2026 projects · usually replies within one business day",
-    proof: ["~5 yrs full-stack", "Next.js · Ktor · gRPC", "Flutter · iOS · Swift", "AWS · CI/CD"],
+    proof: [
+      "~5 yrs full-stack",
+      "stack-agnostic",
+      "web · app · backend · cloud",
+      "scope → release, solo",
+    ],
   },
   business: {
     badge: "Aconecto business registration",
@@ -31,8 +36,13 @@ export const enCopy: PortfolioCopy = {
     eyebrow: "Why Aconecto",
     title: "Built to lower the risk of outsourcing",
     intro:
-      "The question is not “can it be built” but “what gets better when you hand it over.” You get only what you need to decide, stated clearly.",
+      "Stack is just a tool. I work by what gets better when you hand it over — not by which technology happens to be used.",
     points: [
+      {
+        title: "Handles any spec",
+        summary:
+          "I don't insist on one stack. I've shipped across iOS, Flutter, Next.js, Ktor, FastAPI, gRPC, AWS and more, and I pick up whatever technology your project runs on.",
+      },
       {
         title: "One owner, end to end",
         summary:

@@ -1,11 +1,11 @@
-import { Layers, ShieldCheck, UserCheck } from "lucide-react";
+import { Layers, ShieldCheck, Shuffle, UserCheck } from "lucide-react";
 import type { PortfolioCopy } from "@/content/types";
 
 type ValuePropsProps = {
   readonly copy: PortfolioCopy;
 };
 
-const icons = [UserCheck, Layers, ShieldCheck] as const;
+const icons = [Shuffle, UserCheck, Layers, ShieldCheck] as const;
 
 export function ValueProps({ copy }: ValuePropsProps) {
   return (
