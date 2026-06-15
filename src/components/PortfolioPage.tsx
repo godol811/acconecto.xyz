@@ -35,6 +35,10 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
   const [activeId, setActiveId] = useState<CapabilityId>(initialActive);
 
   useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
+  useEffect(() => {
     const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-capability]"));
     const observer = new IntersectionObserver(
       (entries) => {

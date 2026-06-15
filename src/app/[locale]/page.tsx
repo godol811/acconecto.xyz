@@ -3,6 +3,7 @@ import { PortfolioPage } from "@/components/PortfolioPage";
 import { isLocale, locales } from "@/content/locales";
 import type { Locale } from "@/content/types";
 import { pageMetadata } from "@/lib/metadata";
+import { structuredData } from "@/lib/structuredData";
 
 export const dynamicParams = false;
 
@@ -38,5 +39,10 @@ export default async function LocalePage({ params }: LocalePageProps) {
     notFound();
   }
 
-  return <PortfolioPage locale={locale} />;
+  return (
+    <>
+      <script type="application/ld+json">{structuredData(locale)}</script>
+      <PortfolioPage locale={locale} />
+    </>
+  );
 }

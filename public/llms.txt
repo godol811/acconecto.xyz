@@ -1,0 +1,37 @@
+# Aconecto — Jongchan Ko
+
+> Aconecto is a registered Korean software studio (since 2025) led by Jongchan Ko, a full-stack freelance software engineer. One owner takes a product from scope to release across web, mobile, backend, and cloud. Works in English, async across time zones, and usually replies within one business day.
+
+## Positioning
+
+- Implementation quality over spec or stack: how something is built matters more than what it's built with.
+- One owner, end to end: scope, design, frontend, mobile, backend, and release all sit with one person — no handoffs, no lost context.
+- Products, not just screens: API contracts, data models, deployment paths, and testing are owned too, so what launches actually runs in production.
+- Safe to outsource to: registered business with formal contracts, NDAs, and tax invoices; confidentiality by default.
+
+## Services
+
+- MVP build — lean web, app, and API builds that reach real user validation quickly.
+- Frontend systems — dashboards, admin tools, and product sites built for daily operational use.
+- Backend & API — contract-first backends with deployable structure.
+- Cloud & CI/CD — container builds, cloud hosting, release flows, and smoke tests.
+- Technical rescue — auditing and stabilizing stalled or shaky codebases back to shippable.
+
+## Pages
+
+- Home (Korean): https://acconecto.store/
+- Home (English): https://acconecto.store/en/
+- Privacy Policy: https://acconecto.store/privacy.html
+- Terms of Service: https://acconecto.store/terms.html
+- Support: https://acconecto.store/support.html
+
+## Apps shipped solo
+
+- FormLab (iOS / Mac / Vision, Health & Fitness): https://apps.apple.com/us/app/formlab/id6758761079
+- Haru Maeum (iOS, Lifestyle): https://apps.apple.com/app/id6763255363
+- Your Spine Is Screaming (Mac, Developer Tools): https://apps.apple.com/us/app/your-spine-is-screaming/id6764452898
+
+## Contact
+
+- Email: jongchanko@gmail.com
+- For project inquiries, share project type, timeline, target platform, and any current assets.
