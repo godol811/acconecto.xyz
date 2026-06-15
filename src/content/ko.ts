@@ -3,9 +3,9 @@ import type { PortfolioCopy } from "./types";
 
 export const koCopy: PortfolioCopy = {
   meta: {
-    title: "Jongchan Ko / Aconecto - 풀스택 프리랜스 개발자",
+    title: "풀스택 프리랜서 개발자 · 웹·앱·백엔드 외주 개발 | 아코넥토",
     description:
-      "아코넥토는 Jongchan Ko가 운영하는 등록 소프트웨어 스튜디오입니다. 웹·모바일·백엔드·클라우드를 한 사람이 기획부터 배포까지 책임지고, 영어로 시차를 넘어 협업합니다.",
+      "웹·모바일·백엔드·클라우드까지 한 사람이 기획부터 배포까지 책임지는 풀스택 프리랜서 개발자. MVP 구축·외주 개발·기술 복구까지, 정식 계약과 세금계산서 발행이 가능한 등록 소프트웨어 스튜디오 아코넥토(Jongchan Ko).",
   },
   nav: {
     contact: "프로젝트 문의",

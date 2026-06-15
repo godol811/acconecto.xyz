@@ -3,9 +3,9 @@ import type { PortfolioCopy } from "./types";
 
 export const enCopy: PortfolioCopy = {
   meta: {
-    title: "Jongchan Ko / Aconecto - Full-stack Freelance Developer",
+    title: "Full-Stack Freelance Developer · Web, App & Backend | Aconecto",
     description:
-      "Aconecto is a registered Korean software studio led by Jongchan Ko. Full-stack delivery across web, mobile, backend, and cloud — one owner from scope to release, working in English across time zones.",
+      "Full-stack freelance developer for web, mobile, backend, and cloud — one owner from scope to release. MVP builds to technical rescue, with formal contracts, NDAs, and tax invoices. A registered Korean software studio (Jongchan Ko) working in English, async across time zones.",
   },
   nav: {
     contact: "Start a project",
