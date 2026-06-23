@@ -32,6 +32,7 @@
       "!test-results",
       "!public/assets",
       "!public/*.html",
+      "!.gjc",
       "!.omc",
       "!.omx"
     ]

@@ -263,7 +263,7 @@ export const koCopy: PortfolioCopy = {
     eyebrow: "Personal Apps",
     title: "직접 출시한 앱",
     intro:
-      "기획·디자인·개발·배포까지 혼자 끝내 App Store에 올린 제품들. 모두 온디바이스 AI로, 사용자 데이터가 기기 밖으로 나가지 않습니다.",
+      "기획·디자인·개발·배포까지 혼자 끝낸 제품들. App Store 앱부터 Mac 유틸리티, 운영 중인 웹 학습 서비스까지 포함합니다.",
     items: [
       {
         name: "FormLab",
@@ -285,6 +285,13 @@ export const koCopy: PortfolioCopy = {
         meta: "Developer Tools · Mac",
         url: "https://apps.apple.com/us/app/your-spine-is-screaming/id6764452898",
         icon: "/assets/apps/spine.png",
+      },
+      {
+        name: "스웻퀴즈",
+        tagline: "스포츠 지도자 구술 시험을 반복 퀴즈·복습·진행률로 대비하는 웹 학습 서비스",
+        meta: "Education · Web · Supabase",
+        url: "https://sweat-quiz.com",
+        icon: "/assets/apps/sweat-quiz.png",
       },
     ],
   },

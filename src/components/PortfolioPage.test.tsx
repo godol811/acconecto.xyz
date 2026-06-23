@@ -20,6 +20,10 @@ describe("PortfolioPage", () => {
       screen.getAllByText("NextPros — Voice AI Back Office for Trades").length,
     ).toBeGreaterThan(0);
     expect(screen.getByText(/응용 소프트웨어 개발 및 공급업/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /스웻퀴즈/i })).toHaveAttribute(
+      "href",
+      "https://sweat-quiz.com",
+    );
   });
 
   it("changes selected capability tab when clicked", async () => {

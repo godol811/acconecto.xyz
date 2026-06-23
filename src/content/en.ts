@@ -270,7 +270,7 @@ export const enCopy: PortfolioCopy = {
     eyebrow: "Personal apps",
     title: "Apps I shipped solo",
     intro:
-      "Products I scoped, designed, built, and shipped to the App Store entirely on my own — each one running on-device AI so user data never leaves the phone.",
+      "Products I scoped, designed, built, and shipped end-to-end — App Store releases, a Mac utility, and a production web learning service.",
     items: [
       {
         name: "FormLab",
@@ -292,6 +292,14 @@ export const enCopy: PortfolioCopy = {
         meta: "Developer Tools · Mac",
         url: "https://apps.apple.com/us/app/your-spine-is-screaming/id6764452898",
         icon: "/assets/apps/spine.png",
+      },
+      {
+        name: "Sweat Quiz",
+        tagline:
+          "A web quiz service for Korean sports instructor oral-exam prep, with progress, review, and paid access flows",
+        meta: "Education · Web app · Supabase",
+        url: "https://sweat-quiz.com",
+        icon: "/assets/apps/sweat-quiz.png",
       },
     ],
   },

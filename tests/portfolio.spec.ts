@@ -12,6 +12,11 @@ test.describe("Aconecto static portfolio", () => {
     await expect(page.getByText("SANVEL / VIV")).toHaveCount(0);
     const koreanCaseLabels = await page.locator(".case-card .case-eyebrow").allTextContents();
     expect(koreanCaseLabels.join(" ")).not.toMatch(/프리랜스|회사 프로젝트/);
+    await expect(page.getByRole("link", { name: /스웻퀴즈/ })).toHaveAttribute(
+      "href",
+      "https://sweat-quiz.com",
+    );
+    await expect(page.locator(".apps-grid .app-card")).toHaveCount(4);
 
     const contact = page.getByRole("link", { name: /jongchanko@gmail.com|Contact/ }).first();
     await expect(contact).toHaveAttribute("href", /mailto:jongchanko@gmail\.com/);
@@ -23,7 +28,7 @@ test.describe("Aconecto static portfolio", () => {
       .filter({ hasText: "VIV Ring Intelligence Platform" })
       .click();
     await expect(page.locator("#case-vivring .case-detail-dock")).toBeVisible();
-    await expect(page.locator("#case-vivring").getByText("NestJS API 경계")).toBeVisible();
+    await expect(page.locator("#case-vivring dt").getByText("NestJS API 경계")).toBeVisible();
 
     await page.getByRole("tab", { name: /Backend/ }).click();
     await expect(page.locator("#backend")).toBeInViewport();
@@ -36,6 +41,11 @@ test.describe("Aconecto static portfolio", () => {
     await expect(page).toHaveURL(/\/en\/$/);
     await expect(page.getByRole("heading", { name: /Aconecto/ })).toBeVisible();
     await expect(page.getByText(/registered Korean software business/)).toBeVisible();
+    await expect(page.getByRole("link", { name: /Sweat Quiz/ })).toHaveAttribute(
+      "href",
+      "https://sweat-quiz.com",
+    );
+    await expect(page.locator(".apps-grid .app-card")).toHaveCount(4);
     const englishCaseLabels = await page.locator(".case-card .case-eyebrow").allTextContents();
     expect(englishCaseLabels.join(" ")).not.toMatch(/Freelance|Company work/);
   });
@@ -52,7 +62,7 @@ test.describe("Aconecto static portfolio", () => {
   test("keeps reduced-motion content available", async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/en/");
-    await expect(page.getByText("AI-assisted implementation")).toBeVisible();
+    await expect(page.getByRole("heading", { name: /AI-assisted build/ })).toBeVisible();
     await expect(page.getByRole("tab", { name: /AI-native/ })).toBeVisible();
   });
 });
