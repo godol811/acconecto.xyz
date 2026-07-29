@@ -11,13 +11,13 @@ type ThemeToggleProps = {
 
 function currentTheme(): Theme {
   if (typeof document === "undefined") {
-    return "dark";
+    return "light";
   }
   return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
 }
 
 export function ThemeToggle({ label }: ThemeToggleProps) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     setTheme(currentTheme());
