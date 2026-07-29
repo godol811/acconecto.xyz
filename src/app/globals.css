@@ -1582,8 +1582,18 @@ h4 {
 }
 
 .footer-brand {
-  color: #fff;
-  font-weight: 750;
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.footer-logo {
+  height: auto;
+  width: 120px;
+}
+
+.footer-brand span {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer-links {
@@ -2009,28 +2019,13 @@ h4 {
   color: #fff;
   display: inline-flex;
   flex-direction: row;
-  gap: 10px;
   line-height: 1;
+  width: clamp(118px, 11vw, 148px);
 }
 
-.brand-glyph {
-  align-items: center;
-  background: #fff;
-  clip-path: polygon(0 0, 48% 0, 100% 50%, 52% 50%, 100% 100%, 52% 100%, 0 50%, 48% 50%);
-  color: transparent;
-  display: inline-flex;
-  height: 26px;
-  justify-content: center;
-  overflow: hidden;
-  width: 26px;
-}
-
-.brand-wordmark {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: -0.04em;
+.brand-logo-image {
+  height: auto;
+  width: 100%;
 }
 
 .hero-section .topbar-nav {
@@ -2341,6 +2336,10 @@ h4 {
     padding: 16px 18px;
   }
 
+  .hero-section .brand-mark {
+    width: 108px;
+  }
+
   .hero-section .language-toggle,
   .hero-section .theme-toggle {
     min-height: 40px;
@@ -2382,5 +2381,11 @@ h4 {
 
   .hero-proof {
     grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, Mail, Menu } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { contactHref } from "@/content/locales";
 import type { Locale, PortfolioCopy } from "@/content/types";
@@ -155,9 +156,19 @@ export function HeroWorkbench({ copy, locale }: HeroWorkbenchProps) {
         <div className="hero-shade" />
 
         <div className="topbar">
-          <a className="brand-mark" href={locale === "ko" ? "/" : `/${locale}/`}>
-            <span className="brand-glyph">A</span>
-            <span className="brand-wordmark">Aconecto</span>
+          <a
+            aria-label="Aconecto home"
+            className="brand-mark"
+            href={locale === "ko" ? "/" : `/${locale}/`}
+          >
+            <Image
+              alt="Aconecto"
+              className="brand-logo-image"
+              height={296}
+              priority
+              src="/assets/brand/aconecto-lockup-white.png"
+              width={1087}
+            />
           </a>
           <nav className="topbar-nav" aria-label="Primary navigation">
             {navigation.map(([label, href], index) => (

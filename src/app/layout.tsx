@@ -5,6 +5,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   applicationName: "Aconecto Portfolio",
   creator: "Jongchan Ko",
+  icons: {
+    icon: [
+      { url: "/assets/brand/aconecto-icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/brand/aconecto-icon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/assets/brand/aconecto-icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/assets/brand/aconecto-icon-192.png", sizes: "192x192" }],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
